@@ -19,21 +19,21 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
     super(POWER_ID, TYPE, TURN_BASED, owner, amount);
   }
 
-  // TODO: Doesn't fucking work with strength. Figure out another strength pattern?
   @Override
   public boolean betterOnApplyPower(
       AbstractPower power, AbstractCreature creature, AbstractCreature creature1) {
     //    return (AbstractDungeon.player.hasPower(ConfidencePower.POWER_ID));
     int stackAmount = getConfStacks();
     if (AbstractDungeon.player.hasPower(ConfidencePower.POWER_ID)) {
-      if (Objects.equals(power.ID, StrengthPower.POWER_ID) && stackAmount == 0) {
-        power.amount -= getConfStacks();
+      // important to note that this means you cannot use Confidence with powers that increase
+      // strength by 0.
+      if (Objects.equals(power.ID, StrengthPower.POWER_ID) && power.amount == 0) {
+        power.amount -= stackAmount;
       } else if (stackAmount >= 0 || Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
         power.amount += stackAmount;
       } else {
         power.amount -= stackAmount;
       }
-      power.amount += getConfStacks();
       power.updateDescription();
       return true;
     }

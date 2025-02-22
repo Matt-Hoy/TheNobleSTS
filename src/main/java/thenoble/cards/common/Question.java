@@ -13,7 +13,6 @@ import thenoble.character.MyCharacter;
 import thenoble.powers.AdvantagePower;
 import thenoble.util.CardStats;
 
-// TODO: This doesn't work.
 public class Question extends NobleCard {
   public static final String ID = makeID("Question");
   private static final CardStats INFO =
