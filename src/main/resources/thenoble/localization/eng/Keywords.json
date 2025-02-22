@@ -1,0 +1,28 @@
+[
+  {
+    "PROPER_NAME": "Advantage",
+    "NAMES": [
+      "advantage",
+      "Advantage"
+    ],
+    "DESCRIPTION": "Spend your confidence stacks for additional card effects."
+  },
+  {
+    "PROPER_NAME": "Cachet",
+    "NAMES": [
+      "cachet",
+      "Cachet",
+      "cachet:",
+      "Cachet:"
+    ],
+    "DESCRIPTION": "Spend your confidence stacks for additional card effects."
+  },
+  {
+    "PROPER_NAME": "Confidence",
+    "NAMES": [
+      "confidence",
+      "Confidence"
+    ],
+    "DESCRIPTION": "Whenever applying a buff or debuff, increase its value by the number of Confidence stacks."
+  }
+]

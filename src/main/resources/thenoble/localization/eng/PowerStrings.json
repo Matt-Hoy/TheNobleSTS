@@ -1,0 +1,45 @@
+{
+  "${modID}:Advantage": {
+    "NAME": "Advantage",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, gain #b",
+      " #yDexterity."
+    ]
+  },
+  "${modID}:CharismaForm": {
+    "NAME": "Charisma Form",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b",
+      " #yConfidence."
+    ]
+  },
+  "${modID}:Confidence": {
+    "NAME": "Confidence",
+    "DESCRIPTIONS": [
+      "Whenever you apply another buff or debuff, increase the number of stacks by #b",
+      "."
+    ]
+  },
+  "${modID}:Demoralize": {
+    "NAME": "Demoralize",
+    "DESCRIPTIONS": [
+      "The first time you deal unblocked attack damage, gain #b",
+      " #yStrength until end of turn and enemy loses #b",
+      " #yStrength until end of turn."
+    ]
+  },
+  "${modID}:Schadenfreude": {
+    "NAME": "Schadenfreude",
+    "DESCRIPTIONS": [
+      "Whenever an enemy receives a debuff, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${modID}:SocialClimber": {
+    "NAME": "Social Climber",
+    "DESCRIPTIONS": [
+      "Whenever you play a skill that costs zero, draw #b",
+      " card(s)."
+    ]
+  }
+}

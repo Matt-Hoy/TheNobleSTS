@@ -1,0 +1,17 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:CloudyMonocle": {
+    "NAME": "Cloudy Monocle",
+    "FLAVOR": "All the better to see you with.",
+    "DESCRIPTIONS": [
+      "Every time you play 4 #ySkills in a single turn, gain #b",
+      " #yConfidence."
+    ]
+  }
+}

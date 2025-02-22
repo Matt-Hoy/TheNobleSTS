@@ -1,0 +1,87 @@
+{
+  "${modID}:ConfidenceTest": {
+    "NAME": "Confidence Test",
+    "DESCRIPTION": "Gain 5 ${modID}:Confidence."
+  },
+  "${modID}:BuyThemADrink": {
+    "NAME": "Buy Them A Drink",
+    "DESCRIPTION": "Apply !M! Poison for each stack of Weak and Vulnerable."
+  },
+  "${modID}:CharismaForm": {
+    "NAME": "Charisma Form",
+    "DESCRIPTION": "Ethereal. At the start of each turn, gain !M! ${modID}:Confidence.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain !M! ${modID}:Confidence."
+  },
+  "${modID}:Condescend": {
+    "NAME": "Condescend",
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Vulnerable and !M! Weak."
+  },
+  "${modID}:CuttingWords": {
+    "NAME": "Cutting Words",
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Deal an additional !D! damage per stack of ${modID}:Confidence."
+  },
+  "${modID}:DanceOnEm": {
+    "NAME": "Dance On 'Em",
+    "DESCRIPTION": "Gain !B! Block. ALL enemies lose !M! Strength and gain !M! Weak. Exhaust."
+  },
+  "${modID}:Diatribe": {
+    "NAME": "Diatribe",
+    "DESCRIPTION": "Apply !M! Vulnerable and !M! Weak to ALL enemies."
+  },
+  "${modID}:Dissemble": {
+    "NAME": "Dissemble",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${modID}:DuelistsStrike": {
+    "NAME": "Duelist's Strike",
+    "DESCRIPTION": "Deal !D! damage. Gain !M! Dexterity. Exhaust."
+  },
+  "${modID}:FieryTemper": {
+    "NAME": "Fiery Temper",
+    "DESCRIPTION": "Gain !B! Block. Whenever you are attacked this turn, deal !M! damage back."
+  },
+  "${modID}:Hamstring": {
+    "NAME": "Hamstring",
+    "DESCRIPTION": "Deal !D! damage. Apply Slow."
+  },
+  "${modID}:ImpeccableStyle": {
+    "NAME": "Impeccable Style",
+    "DESCRIPTION": "Apply !M! ${modID}:Advantage."
+  },
+  "${modID}:Insulate": {
+    "NAME": "Insulate",
+    "DESCRIPTION": "Gain 1 Block for every stack of every debuff on target enemy."
+  },
+  "${modID}:Preempt": {
+    "NAME": "Preempt",
+    "DESCRIPTION": "Gain !M! Metallicize."
+  },
+  "${modID}:Question": {
+    "NAME": "Question",
+    "DESCRIPTION": "Deal !D! damage. Enemy loses !M! Strength. Exhaust."
+  },
+  "${modID}:RapidRiposte": {
+    "NAME": "Rapid Riposte",
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block."
+  },
+  "${modID}:Roughhouse": {
+    "NAME": "Roughhouse",
+    "DESCRIPTION": "Deal !D! damage. Gain !M! Plated Armor."
+  },
+  "${modID}:Schadenfreude": {
+    "NAME": "Schadenfreude",
+    "DESCRIPTION": "Whenever an enemy receives a debuff, gain !M! block."
+  },
+  "${modID}:SocialClimber": {
+    "NAME": "Social Climber",
+    "DESCRIPTION": "Whenever you play a skill that costs 0, draw !M! card(s)."
+  },
+  "${modID}:Slap": {
+    "NAME": "Slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:ThickSkin": {
+    "NAME": "Thick Skin",
+    "DESCRIPTION": "Gain !M! Plated Armor."
+  }
+}
