@@ -10,19 +10,6 @@ import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
 
-/*
-"${modID}:ExampleCard": {
-  "NAME": "Name",
-  "DESCRIPTION": "Description. NL Second line.",
-  "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-  "EXTENDED_DESCRIPTION": [
-    "You can put more text in here.",
-    "If you need to use it for stuff.",
-    "Blizzard is a good example for this."
-  ]
-},
- */
-
 public class CuttingWords extends NobleCard {
   public static final String ID = makeID("CuttingWords");
   private static final CardStats INFO =
