@@ -1,4 +1,8 @@
 {
+  "${modID}:AgreeToDisagree": {
+    "NAME": "Agree To Disagree",
+    "DESCRIPTION": "Remove all Vulnerable stacks from target enemy. Gain that much Dexterity."
+  },
   "${modID}:ConfidenceTest": {
     "NAME": "Confidence Test",
     "DESCRIPTION": "Gain 5 ${modID}:Confidence."
@@ -20,6 +24,10 @@
     "NAME": "Cutting Words",
     "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Deal an additional !D! damage per stack of ${modID}:Confidence."
   },
+  "${modID}:DanceMoves": {
+    "NAME": "Dance Moves",
+    "DESCRIPTION": "Draw !M! cards."
+  },
   "${modID}:DanceOnEm": {
     "NAME": "Dance On 'Em",
     "DESCRIPTION": "Gain !B! Block. ALL enemies lose !M! Strength and gain !M! Weak. Exhaust."
@@ -39,6 +47,10 @@
   "${modID}:FieryTemper": {
     "NAME": "Fiery Temper",
     "DESCRIPTION": "Gain !B! Block. Whenever you are attacked this turn, deal !M! damage back."
+  },
+  "${modID}:FuzzyIdeas": {
+    "NAME": "Fuzzy Ideas",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Blur."
   },
   "${modID}:Hamstring": {
     "NAME": "Hamstring",
@@ -63,6 +75,10 @@
   "${modID}:RapidRiposte": {
     "NAME": "Rapid Riposte",
     "DESCRIPTION": "Deal !D! damage. Gain !B! Block."
+  },
+  "${modID}:RiskyBiscuit": {
+    "NAME": "Risky Biscuit",
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Costs 1 [E] less per stack of ${modID}:Confidence."
   },
   "${modID}:Roughhouse": {
     "NAME": "Roughhouse",

@@ -3,10 +3,13 @@ package thenoble.powers;
 import static thenoble.TheNoble.makeID;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import thenoble.cards.type.CachetCard;
 
 import java.util.Objects;
 
@@ -22,17 +25,19 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
   @Override
   public boolean betterOnApplyPower(
       AbstractPower power, AbstractCreature creature, AbstractCreature creature1) {
-    //    return (AbstractDungeon.player.hasPower(ConfidencePower.POWER_ID));
-    int stackAmount = getConfStacks();
+    if (Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
+      return true;
+    }
+    int confStacks = getConfStacks();
     if (AbstractDungeon.player.hasPower(ConfidencePower.POWER_ID)) {
       // important to note that this means you cannot use Confidence with powers that increase
       // strength by 0.
       if (Objects.equals(power.ID, StrengthPower.POWER_ID) && power.amount == 0) {
-        power.amount -= stackAmount;
-      } else if (stackAmount >= 0 || Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
-        power.amount += stackAmount;
+        power.amount -= confStacks;
+      } else if (confStacks >= 0 || Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
+        power.amount += confStacks;
       } else {
-        power.amount -= stackAmount;
+        power.amount -= confStacks;
       }
       power.updateDescription();
       return true;
@@ -41,6 +46,9 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
   }
 
   public static int getConfStacks() {
+    if (AbstractDungeon.player == null) {
+      return 0;
+    }
     int confStacks = 0;
     for (AbstractPower power : AbstractDungeon.player.powers) {
       if (Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
@@ -53,7 +61,7 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
   @Override
   public int betterOnApplyPowerStacks(
       AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
-    if (source == owner) {
+    if (source == owner && !Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
       //      Never gain 0 strength as it will subtract.
       if (Objects.equals(power.ID, StrengthPower.POWER_ID) && stackAmount == 0) {
         return stackAmount - getConfStacks();
@@ -64,6 +72,25 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
       }
     }
     return stackAmount;
+  }
+
+  @Override
+  public void onRemove() {
+    for (AbstractCard card : AbstractDungeon.player.hand.group) {
+      if (card instanceof CachetCard) {
+        ((CachetCard) card).onConfidenceRemoved();
+      }
+    }
+    for (AbstractCard card : AbstractDungeon.player.discardPile.group) {
+      if (card instanceof CachetCard) {
+        ((CachetCard) card).onConfidenceRemoved();
+      }
+    }
+    for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
+      if (card instanceof CachetCard) {
+        ((CachetCard) card).onConfidenceRemoved();
+      }
+    }
   }
 
   @Override

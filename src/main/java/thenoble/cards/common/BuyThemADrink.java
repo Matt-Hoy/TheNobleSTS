@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -37,14 +36,6 @@ public class BuyThemADrink extends NobleCard {
           new ApplyPowerAction(
               monster, player, new PoisonPower(monster, player, (totalCount * magicNumber))));
     }
-  }
-
-  private int checkPowerCount(AbstractMonster target, String id) {
-    AbstractPower power = target.getPower(id);
-    if (power == null) {
-      return 0;
-    }
-    return power.amount;
   }
 
   @Override

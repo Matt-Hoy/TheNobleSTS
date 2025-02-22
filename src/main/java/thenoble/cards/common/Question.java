@@ -8,12 +8,11 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thenoble.cards.NobleCard;
+import thenoble.cards.type.CachetCard;
 import thenoble.character.MyCharacter;
-import thenoble.powers.AdvantagePower;
 import thenoble.util.CardStats;
 
-public class Question extends NobleCard {
+public class Question extends CachetCard {
   public static final String ID = makeID("Question");
   private static final CardStats INFO =
       new CardStats(

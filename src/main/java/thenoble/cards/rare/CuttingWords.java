@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thenoble.cards.NobleCard;
+import thenoble.cards.type.CachetCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
 
-public class CuttingWords extends NobleCard {
+public class CuttingWords extends CachetCard {
   public static final String ID = makeID("CuttingWords");
   private static final CardStats INFO =
       new CardStats(

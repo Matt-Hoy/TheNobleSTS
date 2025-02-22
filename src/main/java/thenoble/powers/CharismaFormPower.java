@@ -17,8 +17,7 @@ public class CharismaFormPower extends BasePower {
 
   @Override
   public void atStartOfTurn() {
-    addToTop(
-        new ApplyPowerAction(owner, owner, new ConfidencePower(owner, amount - getConfStacks())));
+    addToTop(new ApplyPowerAction(owner, owner, new ConfidencePower(owner, amount)));
   }
 
   public void updateDescription() {

@@ -14,15 +14,21 @@ import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.Patcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 import thenoble.cards.NobleCard;
+import thenoble.cards.type.CachetCard;
 import thenoble.character.MyCharacter;
+import thenoble.powers.ConfidencePower;
 import thenoble.relics.BaseRelic;
 import thenoble.util.GeneralUtils;
 import thenoble.util.KeywordInfo;
@@ -35,7 +41,8 @@ public class TheNoble
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        PostPowerApplySubscriber {
   public static ModInfo info;
   public static String modID; // Edit your pom.xml to change this
 
@@ -273,5 +280,27 @@ public class TheNoble
                 BaseMod.addRelic(relic, relic.relicType);
               }
             });
+  }
+
+  @Override
+  public void receivePostPowerApplySubscriber(
+      AbstractPower power, AbstractCreature creature, AbstractCreature creature1) {
+    if (Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
+      for (AbstractCard card : AbstractDungeon.player.hand.group) {
+        if (card instanceof CachetCard) {
+          ((CachetCard) card).onConfidenceUpdated(power);
+        }
+      }
+      for (AbstractCard card : AbstractDungeon.player.discardPile.group) {
+        if (card instanceof CachetCard) {
+          ((CachetCard) card).onConfidenceUpdated(power);
+        }
+      }
+      for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
+        if (card instanceof CachetCard) {
+          ((CachetCard) card).onConfidenceUpdated(power);
+        }
+      }
+    }
   }
 }

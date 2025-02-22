@@ -28,13 +28,12 @@ public class CharismaForm extends NobleCard {
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.POWER, CardRarity.RARE, CardTarget.SELF, 3);
   private static final int MAGIC = 1;
-  private static final int UPG_MAGIC = 0;
 
   public CharismaForm() {
     super(ID, INFO);
 
     setEthereal(true, false);
-    setMagic(MAGIC, UPG_MAGIC);
+    setMagic(MAGIC);
   }
 
   @Override

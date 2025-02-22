@@ -7,9 +7,7 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,9 +17,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 import thenoble.TheNoble;
-import thenoble.powers.ConfidencePower;
 import thenoble.util.CardStats;
 import thenoble.util.TriFunction;
 
@@ -215,6 +211,14 @@ public abstract class NobleCard extends CustomCard {
       BaseMod.addDynamicVariable(var);
       initializeDescription();
     }
+  }
+
+  protected int checkPowerCount(AbstractMonster target, String id) {
+    AbstractPower power = target.getPower(id);
+    if (power == null) {
+      return 0;
+    }
+    return power.amount;
   }
 
   protected final void setCustomVar(
@@ -588,60 +592,6 @@ public abstract class NobleCard extends CustomCard {
       this.initializeDescription();
     }
   }
-
-  public int cachetAmount() {
-    for (AbstractPower individualPower : AbstractDungeon.player.powers) {
-      if (Objects.equals(individualPower.ID, ConfidencePower.POWER_ID)) {
-        return individualPower.amount;
-      }
-    }
-    return 0;
-  }
-
-  protected boolean onCachet() {
-    int cachetTimes = cachetAmount();
-
-    for (int i = 0; i < cachetTimes; i++) {
-      // You can do stuff here if you need to.
-    }
-    // You can check for cachet related powers here (similar to combo)
-    return true;
-  }
-
-  /**
-   * This method must be called by your cachet card in order to apply its effect.
-   *
-   * @param player you.
-   * @param monster the monster targeted by the cachet effect (if applicable).
-   * @param cachetTimes the number of times this effect should be applied.This method should be
-   *     overridden by your cachet card in order to apply its effect.
-   */
-  public void triggerCachetEffect(AbstractPlayer player, AbstractMonster monster, int cachetTimes) {
-    onCachet(); // Things that happen before cachet.
-
-    for (int i = 0; i < cachetTimes; i++) {
-      cachetEffect(player, monster);
-      // Here's where you can trigger relics that care about cachet
-    }
-
-    addToBot(new RemoveSpecificPowerAction(player, player, ConfidencePower.POWER_ID));
-  }
-
-  /**
-   * This method can be overridden by your cachet card in order to describe its effect.
-   *
-   * @param player you.
-   * @param monster the monster targeted by the cachet effect (if applicable).
-   */
-  public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {}
-
-  /**
-   * This method can be overridden by your cachet card in order to describe its effect.
-   *
-   * @param player you.
-   * @param monsters The monsters targeted by the cachet effect.
-   */
-  public void cachetEffect(AbstractPlayer player, ArrayList<AbstractMonster> monsters) {}
 
   boolean inCalc = false;
 

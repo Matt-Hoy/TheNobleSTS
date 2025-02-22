@@ -7,12 +7,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thenoble.cards.NobleCard;
+import thenoble.cards.type.CachetCard;
 import thenoble.character.MyCharacter;
 import thenoble.powers.AdvantagePower;
 import thenoble.util.CardStats;
 
-public class Undermine extends NobleCard {
+public class Undermine extends CachetCard {
   public static final String ID = makeID("Undermine");
   private static final CardStats INFO =
       new CardStats(

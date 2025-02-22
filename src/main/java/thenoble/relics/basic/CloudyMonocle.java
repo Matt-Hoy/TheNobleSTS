@@ -37,13 +37,12 @@ public class CloudyMonocle extends BaseRelic {
         counter = 0;
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        int confStacks = getConfStacks();
         addToBot(
             new ApplyPowerAction(
                 AbstractDungeon.player,
                 AbstractDungeon.player,
                 // This is the logic to prevent confidence from stacking with itself.
-                new ConfidencePower(AbstractDungeon.player, CONFIDENCE_AMOUNT - confStacks)));
+                new ConfidencePower(AbstractDungeon.player, CONFIDENCE_AMOUNT)));
       } else if (counter == 3) {
         beginPulse();
       }
