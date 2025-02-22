@@ -624,7 +624,7 @@ public abstract class NobleCard extends CustomCard {
       // Here's where you can trigger relics that care about cachet
     }
 
-    addToTop(new RemoveSpecificPowerAction(player, player, ConfidencePower.POWER_ID));
+    addToBot(new RemoveSpecificPowerAction(player, player, ConfidencePower.POWER_ID));
   }
 
   /**

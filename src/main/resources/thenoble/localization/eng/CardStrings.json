@@ -83,5 +83,9 @@
   "${modID}:ThickSkin": {
     "NAME": "Thick Skin",
     "DESCRIPTION": "Gain !M! Plated Armor."
+  },
+  "${modID}:Undermine": {
+    "NAME": "Undermine",
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Apply !M! ${modID}:Advantage."
   }
 }

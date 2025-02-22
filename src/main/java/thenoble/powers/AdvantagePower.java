@@ -14,8 +14,8 @@ public class AdvantagePower extends BasePower {
   private static final PowerType TYPE = PowerType.DEBUFF;
   private static final boolean TURN_BASED = true;
 
-  public AdvantagePower(AbstractCreature owner, int amount) {
-    super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+  public AdvantagePower(AbstractCreature target, int amount) {
+    super(POWER_ID, TYPE, TURN_BASED, target, amount);
   }
 
   @Override

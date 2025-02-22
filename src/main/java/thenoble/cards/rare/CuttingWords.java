@@ -36,14 +36,14 @@ public class CuttingWords extends NobleCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    int cacheCount = cachetAmount();
+    int cachetCount = cachetAmount();
     addToBot(
         new DamageAction(
             monster,
             new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL),
             AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-    if (cacheCount > 0) {
-      triggerCachetEffect(player, monster, cacheCount);
+    if (cachetCount > 0) {
+      triggerCachetEffect(player, monster, cachetCount);
     }
   }
 
