@@ -24,9 +24,7 @@ public class RiskyBiscuit extends CachetCard {
 
   public RiskyBiscuit() {
     super(ID, INFO);
-    if (AbstractDungeon.player != null
-        && AbstractDungeon.monsterList != null
-        && !AbstractDungeon.getMonsters().monsters.isEmpty()) {
+    if (AbstractDungeon.player != null && AbstractDungeon.combatRewardScreen == null) {
       int confStacks = getConfStacks();
       modifyCostForCombat(-confStacks);
     }
