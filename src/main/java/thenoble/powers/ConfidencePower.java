@@ -6,6 +6,8 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerP
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+
 import java.util.Objects;
 
 public class ConfidencePower extends BasePower implements BetterOnApplyPowerPower {
@@ -17,11 +19,20 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
     super(POWER_ID, TYPE, TURN_BASED, owner, amount);
   }
 
+  // TODO: Doesn't fucking work with strength. Figure out another strength pattern?
   @Override
   public boolean betterOnApplyPower(
       AbstractPower power, AbstractCreature creature, AbstractCreature creature1) {
     //    return (AbstractDungeon.player.hasPower(ConfidencePower.POWER_ID));
+    int stackAmount = getConfStacks();
     if (AbstractDungeon.player.hasPower(ConfidencePower.POWER_ID)) {
+      if (Objects.equals(power.ID, StrengthPower.POWER_ID) && stackAmount == 0) {
+        power.amount -= getConfStacks();
+      } else if (stackAmount >= 0 || Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
+        power.amount += stackAmount;
+      } else {
+        power.amount -= stackAmount;
+      }
       power.amount += getConfStacks();
       power.updateDescription();
       return true;
@@ -43,7 +54,10 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
   public int betterOnApplyPowerStacks(
       AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
     if (source == owner) {
-      if (stackAmount >= 0 || Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
+      //      Never gain 0 strength as it will subtract.
+      if (Objects.equals(power.ID, StrengthPower.POWER_ID) && stackAmount == 0) {
+        return stackAmount - getConfStacks();
+      } else if (stackAmount >= 0 || Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
         return stackAmount + getConfStacks();
       } else {
         return stackAmount - getConfStacks();

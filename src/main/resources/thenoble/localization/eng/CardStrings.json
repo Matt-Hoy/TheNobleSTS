@@ -58,7 +58,7 @@
   },
   "${modID}:Question": {
     "NAME": "Question",
-    "DESCRIPTION": "Deal !D! damage. Enemy loses !M! Strength. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Enemy loses 0 Strength."
   },
   "${modID}:RapidRiposte": {
     "NAME": "Rapid Riposte",
