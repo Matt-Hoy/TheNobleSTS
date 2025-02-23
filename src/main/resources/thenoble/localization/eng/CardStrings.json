@@ -60,6 +60,10 @@
     "NAME": "Impeccable Style",
     "DESCRIPTION": "Apply !M! ${modID}:Advantage."
   },
+  "${modID}:ImperiousAffect": {
+    "NAME": "Imperious Affect",
+    "DESCRIPTION": "Whenever you deal unblocked attack damage, apply !M! Vulnerable."
+  },
   "${modID}:Insulate": {
     "NAME": "Insulate",
     "DESCRIPTION": "Gain 1 Block for every stack of every debuff on target enemy."
@@ -87,6 +91,10 @@
   "${modID}:Schadenfreude": {
     "NAME": "Schadenfreude",
     "DESCRIPTION": "Whenever an enemy receives a debuff, gain !M! block."
+  },
+  "${modID}:SillyAffect": {
+    "NAME": "Silly Affect",
+    "DESCRIPTION": "Whenever you deal unblocked attack damage, apply !M! Weak."
   },
   "${modID}:SocialClimber": {
     "NAME": "Social Climber",

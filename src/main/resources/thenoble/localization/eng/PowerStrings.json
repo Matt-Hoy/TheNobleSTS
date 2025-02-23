@@ -28,11 +28,25 @@
       " #yStrength until end of turn."
     ]
   },
+  "${modID}:ImperiousAffect": {
+    "NAME": "Imperious Affect",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, apply #b",
+      " #yVulnerable."
+    ]
+  },
   "${modID}:Schadenfreude": {
     "NAME": "Schadenfreude",
     "DESCRIPTIONS": [
       "Whenever an enemy receives a debuff, gain #b",
       " #yBlock."
+    ]
+  },
+  "${modID}:SillyAffect": {
+    "NAME": "Silly Affect",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, apply #b",
+      " #yWeak."
     ]
   },
   "${modID}:SocialClimber": {
