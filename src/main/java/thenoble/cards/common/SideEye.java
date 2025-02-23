@@ -1,41 +1,38 @@
 package thenoble.cards.common;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
-import thenoble.powers.AdvantagePower;
 import thenoble.util.CardStats;
 
-import static thenoble.powers.ConfidencePower.getConfStacks;
-
-public class ImpeccableStyle extends NobleCard {
-  public static final String ID = makeID("ImpeccableStyle");
+public class SideEye extends NobleCard {
+  public static final String ID = makeID("SideEye");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY, 1);
+          MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY, 0);
   private static final int MAGIC = 1;
+  private static final int UPG_MAGIC = 2;
+  private static final int DRAW_AMOUNT = 1;
 
-  public ImpeccableStyle() {
+  public SideEye() {
     super(ID, INFO);
 
-    setMagic(MAGIC);
-    setCostUpgrade(0);
+    setMagic(MAGIC, UPG_MAGIC);
   }
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    if (getConfStacks() > 0) {
-      addToBot(
-          new ApplyPowerAction(
-              monster, player, new AdvantagePower(monster, magicNumber), magicNumber));
-    }
+    addToBot(new ApplyPowerAction(monster, player, new PoisonPower(monster, player, magicNumber)));
+    addToBot(new DrawCardAction(player, DRAW_AMOUNT));
   }
 
   @Override
   public AbstractCard makeCopy() {
-    return new ImpeccableStyle();
+    return new SideEye();
   }
 }

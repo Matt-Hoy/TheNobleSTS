@@ -94,6 +94,10 @@
     "NAME": "Insulate",
     "DESCRIPTION": "Gain 1 Block for every stack of every debuff on target enemy."
   },
+  "${modID}:InsultToInjury": {
+    "NAME": "Insult To Injury",
+    "DESCRIPTION": "Deal !D! damage. Whenever you play a skill, return this from the discard pile to your Hand."
+  },
   "${modID}:Patron": {
     "NAME": "Patron",
     "DESCRIPTION": "Whenever you play a power, add a random power card into your hand."
@@ -130,6 +134,10 @@
   "${modID}:ShoppingSpree": {
     "NAME": "Shopping Spree",
     "DESCRIPTION": "Whenever you play a power, gain !M! block."
+  },
+  "${modID}:SideEye": {
+    "NAME": "Side Eye",
+    "DESCRIPTION": "Apply !M! Poison. Draw a card."
   },
   "${modID}:SillyAffect": {
     "NAME": "Silly Affect",
