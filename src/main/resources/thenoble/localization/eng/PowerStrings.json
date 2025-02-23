@@ -97,5 +97,12 @@
       "Whenever you draw a card, gain #b",
       " #yBlock."
     ]
+  },
+  "${modID}:WeightRoom": {
+    "NAME": "Weight Room",
+    "DESCRIPTIONS": [
+      "Whenever you play a skill this turn, gain #b",
+      " #yStrength."
+    ]
   }
 }

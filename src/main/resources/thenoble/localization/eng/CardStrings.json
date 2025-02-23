@@ -158,5 +158,9 @@
   "${modID}:Undermine": {
     "NAME": "Undermine",
     "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Apply !M! ${modID}:Advantage."
+  },
+  "${modID}:WeightRoom": {
+    "NAME": "Weight Room",
+    "DESCRIPTION": "Whenever you play a skill this turn, gain !M! Strength."
   }
 }
