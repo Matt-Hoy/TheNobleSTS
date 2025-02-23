@@ -7,7 +7,7 @@ import thenoble.character.MyCharacter;
 import thenoble.relics.BaseRelic;
 
 public class RelicTemplate extends BaseRelic {
-  private static final String NAME = "RELIC_NAME_HERE";
+  private static final String NAME = "RelicNameHere";
   public static final String ID = makeID(NAME);
   private static final RelicTier RARITY = RelicTier.COMMON;
   private static final LandingSound SOUND = LandingSound.CLINK;

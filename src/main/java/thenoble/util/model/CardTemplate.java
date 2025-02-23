@@ -21,7 +21,7 @@ import thenoble.util.CardStats;
  */
 
 public class CardTemplate extends NobleCard {
-  public static final String ID = makeID("CARD_NAME_HERE");
+  public static final String ID = makeID("CardNameHere");
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY, 1);

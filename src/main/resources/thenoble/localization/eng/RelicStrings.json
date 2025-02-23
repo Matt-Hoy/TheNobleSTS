@@ -14,12 +14,26 @@
       " #yConfidence."
     ]
   },
+  "${modID}:ClayBattery": {
+    "NAME": "Clay Battery",
+    "FLAVOR": "Capable of powering a Game Boy Advanced.",
+    "DESCRIPTIONS": [
+      "Every time you play 10 #yPowers, gain [E]."
+    ]
+  },
   "${modID}:DebonairAscott": {
     "NAME": "Debonair Ascott",
     "FLAVOR": "I got it at Dan Flashes.",
     "DESCRIPTIONS": [
       "At the start of each combat, gain #b",
       " #yConfidence."
+    ]
+  },
+  "${modID}:SilverFlute": {
+    "NAME": "Silver Flute",
+    "FLAVOR": "One of these days you'll learn to play it.",
+    "DESCRIPTIONS": [
+      "Every time you play 10 #ySkills, gain [E]."
     ]
   }
 }
