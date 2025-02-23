@@ -69,6 +69,10 @@
     "NAME": "Fuzzy Ideas",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Blur."
   },
+  "${modID}:Gossip": {
+    "NAME": "Gossip",
+    "DESCRIPTION": "Gain !B! Block. Apply !M! Poison to ALL enemies."
+  },
   "${modID}:Hamstring": {
     "NAME": "Hamstring",
     "DESCRIPTION": "Deal !D! damage. Apply Slow."
