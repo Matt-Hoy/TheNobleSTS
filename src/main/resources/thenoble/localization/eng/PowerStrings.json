@@ -28,6 +28,13 @@
       " #yStrength until end of turn."
     ]
   },
+  "${modID}:Entitlement": {
+    "NAME": "Entitlement",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b",
+      " card(s)"
+    ]
+  },
   "${modID}:ImperiousAffect": {
     "NAME": "Imperious Affect",
     "DESCRIPTIONS": [

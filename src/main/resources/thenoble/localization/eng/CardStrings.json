@@ -8,6 +8,10 @@
     "NAME": "Agree To Disagree",
     "DESCRIPTION": "Remove all Vulnerable stacks from target enemy. Gain that much Dexterity."
   },
+  "${modID}:AtALoss": {
+    "NAME": "At A Loss",
+    "DESCRIPTION": "Whenever you play a card this turn, ALL enemies lose !M! HP."
+  },
   "${modID}:ConfidenceTest": {
     "NAME": "Confidence Test",
     "DESCRIPTION": "Gain 1 ${modID}:Confidence."
@@ -48,6 +52,14 @@
   "${modID}:DuelistsStrike": {
     "NAME": "Duelist's Strike",
     "DESCRIPTION": "Deal !D! damage. Gain !M! Dexterity. Exhaust."
+  },
+  "${modID}:Entitlement": {
+    "NAME": "Entitlement",
+    "DESCRIPTION": "At the start of your turn, draw !M! card."
+  },
+  "${modID}:FancyBoots": {
+    "NAME": "Fancy Boots",
+    "DESCRIPTION": "Gain !M! Dexterity."
   },
   "${modID}:FieryTemper": {
     "NAME": "Fiery Temper",
