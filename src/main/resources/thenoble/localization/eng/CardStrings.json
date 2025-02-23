@@ -89,7 +89,7 @@
   },
   "${modID}:Preempt": {
     "NAME": "Preempt",
-    "DESCRIPTION": "Gain !M! Metallicize."
+    "DESCRIPTION": "Gain !M! Plated Armor."
   },
   "${modID}:Question": {
     "NAME": "Question",
@@ -129,7 +129,7 @@
   },
   "${modID}:ThickSkin": {
     "NAME": "Thick Skin",
-    "DESCRIPTION": "Gain !M! Plated Armor."
+    "DESCRIPTION": "Gain !M! Metallicize."
   },
   "${modID}:Undermine": {
     "NAME": "Undermine",
