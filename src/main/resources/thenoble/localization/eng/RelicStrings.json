@@ -13,5 +13,13 @@
       "Every time you play 4 #ySkills in a single turn, gain #b",
       " #yConfidence."
     ]
+  },
+  "${modID}:DebonairAscott": {
+    "NAME": "Debonair Ascott",
+    "FLAVOR": "I got it at Dan Flashes.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b",
+      " #yConfidence."
+    ]
   }
 }
