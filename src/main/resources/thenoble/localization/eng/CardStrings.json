@@ -5,7 +5,7 @@
   },
   "${modID}:ConfidenceTest": {
     "NAME": "Confidence Test",
-    "DESCRIPTION": "Gain 5 ${modID}:Confidence."
+    "DESCRIPTION": "Gain 1 ${modID}:Confidence."
   },
   "${modID}:BuyThemADrink": {
     "NAME": "Buy Them A Drink",
@@ -67,6 +67,11 @@
   "${modID}:Insulate": {
     "NAME": "Insulate",
     "DESCRIPTION": "Gain 1 Block for every stack of every debuff on target enemy."
+  },
+  "${modID}:PracticedAffect": {
+    "NAME": "Practiced Affect",
+    "DESCRIPTION": "Whenever you play a skill, gain !M! block.",
+    "UPGRADE_DESCRIPTION": "Innate. Whenever you play a skill, gain !M! block."
   },
   "${modID}:Preempt": {
     "NAME": "Preempt",

@@ -35,6 +35,13 @@
       " #yVulnerable."
     ]
   },
+  "${modID}:PracticedAffect": {
+    "NAME": "Practiced Affect",
+    "DESCRIPTIONS": [
+      "Whenever you play a skill, gain #b",
+      " #yBlock."
+    ]
+  },
   "${modID}:Schadenfreude": {
     "NAME": "Schadenfreude",
     "DESCRIPTIONS": [
