@@ -35,6 +35,20 @@
       " #yVulnerable."
     ]
   },
+  "${modID}:Inheritance": {
+    "NAME": "Inheritance",
+    "DESCRIPTIONS": [
+      "Whenever you play a power, draw #b",
+      " card(s)."
+    ]
+  },
+  "${modID}:Patron": {
+    "NAME": "Patron",
+    "DESCRIPTIONS": [
+      "Whenever you play a power, add #b",
+      " random power card(s) into your hand."
+    ]
+  },
   "${modID}:PracticedAffect": {
     "NAME": "Practiced Affect",
     "DESCRIPTIONS": [
@@ -46,6 +60,13 @@
     "NAME": "Schadenfreude",
     "DESCRIPTIONS": [
       "Whenever an enemy receives a debuff, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${modID}:ShoppingSpree": {
+    "NAME": "Shopping Spree",
+    "DESCRIPTIONS": [
+      "Whenever you play a power, gain #b",
       " #yBlock."
     ]
   },

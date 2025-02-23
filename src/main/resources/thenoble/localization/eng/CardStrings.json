@@ -69,9 +69,18 @@
     "NAME": "Imperious Affect",
     "DESCRIPTION": "Whenever you deal unblocked attack damage, apply !M! Vulnerable."
   },
+  "${modID}:Inheritance": {
+    "NAME": "Inheritance",
+    "DESCRIPTION": "Whenever you play a power, draw a card.",
+    "UPGRADE_DESCRIPTION": "Innate. Whenever you play a power, draw a card."
+  },
   "${modID}:Insulate": {
     "NAME": "Insulate",
     "DESCRIPTION": "Gain 1 Block for every stack of every debuff on target enemy."
+  },
+  "${modID}:Patron": {
+    "NAME": "Patron",
+    "DESCRIPTION": "Whenever you play a power, add a random power card into your hand."
   },
   "${modID}:PracticedAffect": {
     "NAME": "Practiced Affect",
@@ -101,6 +110,10 @@
   "${modID}:Schadenfreude": {
     "NAME": "Schadenfreude",
     "DESCRIPTION": "Whenever an enemy receives a debuff, gain !M! block."
+  },
+  "${modID}:ShoppingSpree": {
+    "NAME": "Shopping Spree",
+    "DESCRIPTION": "Whenever you play a power, gain !M! block."
   },
   "${modID}:SillyAffect": {
     "NAME": "Silly Affect",
