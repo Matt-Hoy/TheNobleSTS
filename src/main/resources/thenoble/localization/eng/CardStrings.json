@@ -1,4 +1,9 @@
 {
+  "${modID}:AStepAhead": {
+    "NAME": "A Step Ahead",
+    "DESCRIPTION": "Whenever you draw a card, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate. Whenever you draw a card, gain !M! Block."
+  },
   "${modID}:AgreeToDisagree": {
     "NAME": "Agree To Disagree",
     "DESCRIPTION": "Remove all Vulnerable stacks from target enemy. Gain that much Dexterity."

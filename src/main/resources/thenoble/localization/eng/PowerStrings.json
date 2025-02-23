@@ -62,5 +62,12 @@
       "Whenever you play a skill that costs zero, draw #b",
       " card(s)."
     ]
+  },
+  "${modID}:StepAhead": {
+    "NAME": "Step Ahead",
+    "DESCRIPTIONS": [
+      "Whenever you draw a card, gain #b",
+      " #yBlock."
+    ]
   }
 }
