@@ -155,6 +155,10 @@
     "NAME": "Thick Skin",
     "DESCRIPTION": "Gain !M! Metallicize."
   },
+  "${modID}:TheDuster": {
+    "NAME": "The Duster",
+    "DESCRIPTION": "Gain !M! Buffer. Exhaust."
+  },
   "${modID}:Undermine": {
     "NAME": "Undermine",
     "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Apply !M! ${modID}:Advantage."
