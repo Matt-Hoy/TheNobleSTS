@@ -29,6 +29,10 @@
     "NAME": "Condescend",
     "DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Vulnerable and !M! Weak."
   },
+  "${modID}:CultistMasquerade": {
+    "NAME": "Cultist Masquerade",
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Gain !M! Ritual. Exhaust."
+  },
   "${modID}:CuttingWords": {
     "NAME": "Cutting Words",
     "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Deal an additional !D! damage per stack of ${modID}:Confidence."
