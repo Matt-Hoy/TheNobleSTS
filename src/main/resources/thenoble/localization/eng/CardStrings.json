@@ -128,6 +128,10 @@
     "NAME": "Preempt",
     "DESCRIPTION": "Gain !M! Plated Armor."
   },
+  "${modID}:Purify": {
+    "NAME": "Purify",
+    "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: Exhaust every Status and Curse card in your hand and discard pile."
+  },
   "${modID}:Question": {
     "NAME": "Question",
     "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Enemy loses 0 Strength."
