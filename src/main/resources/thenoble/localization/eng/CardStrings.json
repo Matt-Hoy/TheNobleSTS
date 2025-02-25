@@ -12,6 +12,10 @@
     "NAME": "At A Loss",
     "DESCRIPTION": "Whenever you play a card this turn, ALL enemies lose !M! HP."
   },
+  "${modID}:BadAttitude": {
+    "NAME": "Bad Attitude",
+    "DESCRIPTION": "Whenever you play a power, ALL enemies gain !M! Poison."
+  },
   "${modID}:ConfidenceTest": {
     "NAME": "Confidence Test",
     "DESCRIPTION": "Gain 1 ${modID}:Confidence."

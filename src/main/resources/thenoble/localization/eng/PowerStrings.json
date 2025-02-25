@@ -6,6 +6,13 @@
       " #yDexterity."
     ]
   },
+  "${modID}:BadAttitude": {
+    "NAME": "BadAttitude",
+    "DESCRIPTIONS": [
+      "Whenever you play a power, ALL enemies gain #b",
+      " #yPoison."
+    ]
+  },
   "${modID}:CharismaForm": {
     "NAME": "Charisma Form",
     "DESCRIPTIONS": [
