@@ -49,6 +49,10 @@
     "NAME": "Dissemble",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "${modID}:Dissuade": {
+    "NAME": "Dissuade",
+    "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: ALL enemies lose !M! Strength. Exhaust."
+  },
   "${modID}:DuelistsStrike": {
     "NAME": "Duelist's Strike",
     "DESCRIPTION": "Deal !D! damage. Gain !M! Dexterity. Exhaust."
@@ -56,6 +60,11 @@
   "${modID}:Entitlement": {
     "NAME": "Entitlement",
     "DESCRIPTION": "At the start of your turn, draw !M! card."
+  },
+  "${modID}:EyeForQuality": {
+    "NAME": "Eye For Quality",
+    "DESCRIPTION": "Gain !M! Artifact. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Artifact."
   },
   "${modID}:FancyBoots": {
     "NAME": "Fancy Boots",
@@ -97,6 +106,10 @@
   "${modID}:InsultToInjury": {
     "NAME": "Insult To Injury",
     "DESCRIPTION": "Deal !D! damage. Whenever you play a skill, return this from the discard pile to your Hand."
+  },
+  "${modID}:OpenBar": {
+    "NAME": "Open Bar",
+    "DESCRIPTION": "Gain !M! Regen. Exhaust."
   },
   "${modID}:Patron": {
     "NAME": "Patron",

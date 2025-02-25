@@ -29,12 +29,12 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
       return true;
     }
     int confStacks = getConfStacks();
-    if (AbstractDungeon.player.hasPower(ConfidencePower.POWER_ID)) {
+    if (confStacks > 0 && !Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
       // important to note that this means you cannot use Confidence with powers that increase
       // strength by 0.
-      if (Objects.equals(power.ID, StrengthPower.POWER_ID) && power.amount == 0) {
+      if (power.amount == 0 && Objects.equals(power.ID, StrengthPower.POWER_ID)) {
         power.amount -= confStacks;
-      } else if (confStacks >= 0 || Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
+      } else if (power.amount >= 0) {
         power.amount += confStacks;
       } else {
         power.amount -= confStacks;
@@ -61,8 +61,8 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
   @Override
   public int betterOnApplyPowerStacks(
       AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
+    // && !Objects.equals(power.ID, ConfidencePower.POWER_ID)
     if (source == owner && !Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
-      //      Never gain 0 strength as it will subtract.
       if (Objects.equals(power.ID, StrengthPower.POWER_ID) && stackAmount == 0) {
         return stackAmount - getConfStacks();
       } else if (stackAmount >= 0 || Objects.equals(power.ID, ConfidencePower.POWER_ID)) {

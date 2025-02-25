@@ -60,6 +60,26 @@ public abstract class CachetCard extends NobleCard {
   }
 
   /**
+   * This method must be called by your cachet card in order to apply its effect.
+   *
+   * @param player you.
+   * @param monsters the monsters targeted by the cachet effect (if applicable).
+   * @param cachetTimes the number of times this effect should be applied.This method should be
+   *     overridden by your cachet card in order to apply its effect.
+   */
+  public void triggerCachetEffect(
+      AbstractPlayer player, ArrayList<AbstractMonster> monsters, int cachetTimes) {
+    onCachet(); // Things that happen before cachet.
+
+    for (int i = 0; i < cachetTimes; i++) {
+      cachetEffect(player, monsters);
+      // Here's where you can trigger relics that care about cachet
+    }
+
+    addToBot(new RemoveSpecificPowerAction(player, player, ConfidencePower.POWER_ID));
+  }
+
+  /**
    * This method can be overridden by your cachet card in order to describe its effect.
    *
    * @param player you.
