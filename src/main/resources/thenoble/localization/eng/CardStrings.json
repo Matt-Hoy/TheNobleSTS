@@ -8,6 +8,10 @@
     "NAME": "Agree To Disagree",
     "DESCRIPTION": "Remove all Vulnerable stacks from target enemy. Gain that much Dexterity."
   },
+  "${modID}:AntiquePistol": {
+    "NAME": "Antique Pistol",
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Permanently increase this card's damage by !M!. Exhaust."
+  },
   "${modID}:AtALoss": {
     "NAME": "At A Loss",
     "DESCRIPTION": "Whenever you play a card this turn, ALL enemies lose !M! HP."
