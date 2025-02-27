@@ -1,7 +1,6 @@
 package thenoble.powers;
 
 import static thenoble.TheNoble.makeID;
-import static thenoble.powers.ConfidencePower.getConfStacks;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;

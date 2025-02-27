@@ -9,8 +9,6 @@ import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
 
-import static thenoble.powers.ConfidencePower.getConfStacks;
-
 public class EyeForQuality extends NobleCard {
   public static final String ID = makeID("EyeForQuality");
   private static final CardStats INFO =

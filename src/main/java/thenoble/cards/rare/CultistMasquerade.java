@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RitualPower;
-import thenoble.cards.NobleCard;
 import thenoble.cards.type.CachetCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;

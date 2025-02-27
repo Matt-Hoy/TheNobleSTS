@@ -10,8 +10,6 @@ import thenoble.character.MyCharacter;
 import thenoble.powers.ConfidencePower;
 import thenoble.util.CardStats;
 
-import static thenoble.powers.ConfidencePower.getConfStacks;
-
 public class FancyBoots extends NobleCard {
   public static final String ID = makeID("FancyBoots");
   private static final CardStats INFO =

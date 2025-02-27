@@ -3,15 +3,13 @@ package thenoble.powers;
 import static thenoble.TheNoble.makeID;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thenoble.cards.type.CachetCard;
-
 import java.util.Objects;
+import thenoble.cards.type.CachetCard;
 
 public class ConfidencePower extends BasePower implements BetterOnApplyPowerPower {
   public static final String POWER_ID = makeID("Confidence");

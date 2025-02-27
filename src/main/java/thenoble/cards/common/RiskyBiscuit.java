@@ -1,5 +1,7 @@
 package thenoble.cards.common;
 
+import static thenoble.powers.ConfidencePower.getConfStacks;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,8 +13,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import thenoble.cards.type.CachetCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
-
-import static thenoble.powers.ConfidencePower.getConfStacks;
 
 public class RiskyBiscuit extends CachetCard {
   public static final String ID = makeID("RiskyBiscuit");

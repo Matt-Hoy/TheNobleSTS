@@ -7,12 +7,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thenoble.cards.NobleCard;
+import java.util.ArrayList;
 import thenoble.cards.type.CachetCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
-
-import java.util.ArrayList;
 
 public class Dissuade extends CachetCard {
   public static final String ID = makeID("Dissuade");

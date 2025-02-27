@@ -1,5 +1,7 @@
 package thenoble.cards.uncommon;
 
+import static thenoble.powers.ConfidencePower.getConfStacks;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,14 +10,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import thenoble.cards.NobleCard;
+import java.util.ArrayList;
 import thenoble.cards.type.CachetCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
-
-import java.util.ArrayList;
-
-import static thenoble.powers.ConfidencePower.getConfStacks;
 
 public class WideSwipe extends CachetCard {
   public static final String ID = makeID("WideSwipe");

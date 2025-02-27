@@ -1,12 +1,10 @@
 package thenoble.cards.rare;
 
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import thenoble.cards.NobleCard;
 import thenoble.cards.type.CachetCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;

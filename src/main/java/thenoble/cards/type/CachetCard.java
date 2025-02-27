@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import java.util.ArrayList;
 import java.util.Objects;
-
 import thenoble.cards.NobleCard;
 import thenoble.powers.ConfidencePower;
 import thenoble.util.CardStats;
@@ -53,7 +52,7 @@ public abstract class CachetCard extends NobleCard {
 
     for (int i = 0; i < cachetTimes; i++) {
       cachetEffect(player, monster);
-      // Here's where you can trigger relics that care about cachet
+      // Here's where you can trigger relics that care about cachet loops
     }
 
     addToBot(new RemoveSpecificPowerAction(player, player, ConfidencePower.POWER_ID));

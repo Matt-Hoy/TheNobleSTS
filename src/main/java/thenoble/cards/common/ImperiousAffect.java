@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
 import thenoble.powers.ImperiousAffectPower;
-import thenoble.powers.SillyAffectPower;
 import thenoble.util.CardStats;
 
 public class ImperiousAffect extends NobleCard {

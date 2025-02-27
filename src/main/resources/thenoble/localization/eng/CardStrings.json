@@ -196,6 +196,11 @@
     "NAME": "The Duster",
     "DESCRIPTION": "Gain !M! Buffer. Exhaust."
   },
+  "${modID}:ThrowTheGlove": {
+    "NAME": "Throw The Glove",
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards equal to your ${modID}:Confidence.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards equal to your ${modID}:Confidence + 1."
+  },
   "${modID}:Undermine": {
     "NAME": "Undermine",
     "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Apply !M! ${modID}:Advantage."
