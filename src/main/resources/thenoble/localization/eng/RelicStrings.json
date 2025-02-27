@@ -43,5 +43,12 @@
     "DESCRIPTIONS": [
       "Every time you play 10 #ySkills, gain [E]."
     ]
+  },
+  "${modID}:WoodenDeckBox": {
+    "NAME": "Wooden Deck Box",
+    "FLAVOR": "Can't 3D print wood. Yet...",
+    "DESCRIPTIONS": [
+      "Every time you trigger #yCachet, draw a card."
+    ]
   }
 }

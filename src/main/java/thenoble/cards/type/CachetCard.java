@@ -1,5 +1,6 @@
 package thenoble.cards.type;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import thenoble.cards.NobleCard;
 import thenoble.powers.ConfidencePower;
+import thenoble.relics.rare.WoodenDeckBox;
 import thenoble.util.CardStats;
 
 public abstract class CachetCard extends NobleCard {
@@ -33,10 +35,12 @@ public abstract class CachetCard extends NobleCard {
   protected void onCachet() {
     int cachetTimes = cachetAmount();
 
-    for (int i = 0; i < cachetTimes; i++) {
-      // You can do stuff here if you need to.
+    //    for (int i = 0; i < cachetTimes; i++) {
+    //      // You can do stuff here if you need to.
+    //    }
+    if (AbstractDungeon.player.hasRelic(WoodenDeckBox.ID)) {
+      addToBot(new DrawCardAction(AbstractDungeon.player, 1));
     }
-    // You can check for cachet related powers here (similar to combo)
   }
 
   /**
