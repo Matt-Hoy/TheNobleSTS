@@ -25,7 +25,7 @@ public class AntiquePistol extends CachetCard {
   private static final int UPG_MAGIC = 7;
   private static final int CACHET_TIMES = 1;
 
-  private class AntiquePistolAction extends AbstractGameAction {
+  private static class AntiquePistolAction extends AbstractGameAction {
     private final int incAmount;
     private final AbstractCard activeCard;
 

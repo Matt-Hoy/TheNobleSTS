@@ -86,6 +86,10 @@
     "NAME": "Fiery Temper",
     "DESCRIPTION": "Gain !B! Block. Whenever you are attacked this turn, deal !M! damage back."
   },
+  "${modID}:Flaky": {
+    "NAME": "Flaky",
+    "DESCRIPTION": "Gain !M! Intangible. Exhaust."
+  },
   "${modID}:FuzzyIdeas": {
     "NAME": "Fuzzy Ideas",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Blur."
