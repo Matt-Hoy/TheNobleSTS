@@ -102,6 +102,10 @@
     "NAME": "Hamstring",
     "DESCRIPTION": "Deal !D! damage. Apply Slow."
   },
+  "${modID}:HookahLounge": {
+    "NAME": "Hookah Lounge",
+    "DESCRIPTION": "Apply !M! Poison to ALL enemies."
+  },
   "${modID}:ImpeccableStyle": {
     "NAME": "Impeccable Style",
     "DESCRIPTION": "Apply !M! ${modID}:Advantage."
