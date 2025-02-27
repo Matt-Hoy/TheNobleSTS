@@ -199,5 +199,9 @@
   "${modID}:WeightRoom": {
     "NAME": "Weight Room",
     "DESCRIPTION": "Whenever you play a skill this turn, gain !M! Strength."
+  },
+  "${modID}:WideSwipe": {
+    "NAME": "Wide Swipe",
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Instead, deal double damage to ALL enemies."
   }
 }
