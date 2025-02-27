@@ -1,4 +1,4 @@
-package thenoble.relics.basic;
+package thenoble.relics.boss;
 
 import static thenoble.TheNoble.makeID;
 
@@ -11,28 +11,31 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import thenoble.character.MyCharacter;
 import thenoble.powers.ConfidencePower;
 import thenoble.relics.BaseRelic;
+import thenoble.relics.basic.CloudyMonocle;
 
-public class CloudyMonocle extends BaseRelic {
-  private static final String NAME = "CloudyMonocle";
+import java.util.Objects;
+
+public class ClearMonocle extends BaseRelic {
+  private static final String NAME = "ClearMonocle";
   public static final String ID = makeID(NAME);
-  private static final RelicTier RARITY = RelicTier.STARTER;
+  private static final RelicTier RARITY = RelicTier.BOSS;
   private static final LandingSound SOUND = LandingSound.CLINK;
   private static final int CONFIDENCE_AMOUNT = 1;
+
+  public ClearMonocle() {
+    super(ID, NAME, MyCharacter.Meta.CARD_COLOR, RARITY, SOUND);
+  }
 
   @Override
   public void atTurnStart() {
     counter = 0;
   }
 
-  public CloudyMonocle() {
-    super(ID, NAME, MyCharacter.Meta.CARD_COLOR, RARITY, SOUND);
-  }
-
   @Override
   public void onUseCard(AbstractCard card, UseCardAction useCardAction) {
     if (card.type == AbstractCard.CardType.SKILL) {
       ++counter;
-      if (counter % 4 == 0) {
+      if (counter % 3 == 0) {
         counter = 0;
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -41,7 +44,7 @@ public class CloudyMonocle extends BaseRelic {
                 AbstractDungeon.player,
                 AbstractDungeon.player,
                 new ConfidencePower(AbstractDungeon.player, CONFIDENCE_AMOUNT)));
-      } else if (counter == 3) {
+      } else if (counter == 2) {
         beginPulse();
       }
     }
@@ -53,8 +56,27 @@ public class CloudyMonocle extends BaseRelic {
   }
 
   @Override
+  public boolean canSpawn() {
+    return AbstractDungeon.player.hasRelic(CloudyMonocle.ID);
+  }
+
+  @Override
+  public void obtain() {
+    if (AbstractDungeon.player.hasRelic(CloudyMonocle.ID)) {
+      for (int i = 0; i < AbstractDungeon.player.relics.size(); i++) {
+        if (Objects.equals(AbstractDungeon.player.relics.get(i).relicId, CloudyMonocle.ID)) {
+          instantObtain(AbstractDungeon.player, i, true);
+          break;
+        }
+      }
+    } else {
+      super.obtain();
+    }
+  }
+
+  @Override
   public AbstractRelic makeCopy() {
-    return new CloudyMonocle();
+    return new ClearMonocle();
   }
 
   @Override
