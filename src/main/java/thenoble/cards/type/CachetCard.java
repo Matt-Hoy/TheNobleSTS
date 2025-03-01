@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import thenoble.cards.NobleCard;
 import thenoble.powers.ConfidencePower;
+import thenoble.relics.rare.DanceCertificate;
 import thenoble.relics.rare.SelfieStick;
 import thenoble.relics.rare.WoodenDeckBox;
 import thenoble.relics.type.CachetRelic;
@@ -19,7 +20,7 @@ import thenoble.util.CardStats;
 
 public abstract class CachetCard extends NobleCard {
   private static final ArrayList<String> CACHET_RELICS =
-      new ArrayList<String>(Arrays.asList(SelfieStick.ID));
+      new ArrayList<String>(Arrays.asList(SelfieStick.ID, DanceCertificate.ID));
 
   public CachetCard(String ID, CardStats info) {
     super(ID, info);

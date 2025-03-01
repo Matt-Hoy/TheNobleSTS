@@ -29,6 +29,14 @@
       "Every time you play 10 #yPowers, gain [E]."
     ]
   },
+  "${modID}:DanceCertificate": {
+    "NAME": "Dance Certificate",
+    "FLAVOR": "Literal proof of your moves.",
+    "DESCRIPTIONS": [
+      "Every time you spend 5 #yConfidence, gain #b",
+      " #yDexterity."
+    ]
+  },
   "${modID}:DebonairAscott": {
     "NAME": "Debonair Ascott",
     "FLAVOR": "I got it at Dan Flashes.",
@@ -41,7 +49,7 @@
     "NAME": "Selfie Stick",
     "FLAVOR": "Look good from every angle.",
     "DESCRIPTIONS": [
-      "Every time you spend 3 #yConfidence, gain #b",
+      "Every time you spend 5 #yConfidence, gain #b",
       " #yStrength."
     ]
   },

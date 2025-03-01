@@ -5,19 +5,19 @@ import static thenoble.TheNoble.makeID;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import thenoble.character.MyCharacter;
 import thenoble.relics.type.CachetRelic;
 
-public class SelfieStick extends CachetRelic {
-  private static final String NAME = "SelfieStick";
+public class DanceCertificate extends CachetRelic {
+  private static final String NAME = "DanceCertificate";
   public static final String ID = makeID(NAME);
   private static final RelicTier RARITY = RelicTier.RARE;
   private static final LandingSound SOUND = LandingSound.FLAT;
-  private static final int STRENGTH_AMOUNT = 1;
+  private static final int DEXTERITY_AMOUNT = 1;
 
-  public SelfieStick() {
+  public DanceCertificate() {
     super(ID, NAME, MyCharacter.Meta.CARD_COLOR, RARITY, SOUND);
     counter = 0;
   }
@@ -34,7 +34,7 @@ public class SelfieStick extends CachetRelic {
             new ApplyPowerAction(
                 AbstractDungeon.player,
                 AbstractDungeon.player,
-                new StrengthPower(AbstractDungeon.player, STRENGTH_AMOUNT)));
+                new DexterityPower(AbstractDungeon.player, DEXTERITY_AMOUNT)));
       } else if (counter == 4) {
         beginPulse();
       }
@@ -43,11 +43,11 @@ public class SelfieStick extends CachetRelic {
 
   @Override
   public AbstractRelic makeCopy() {
-    return new SelfieStick();
+    return new DanceCertificate();
   }
 
   @Override
   public String getUpdatedDescription() {
-    return DESCRIPTIONS[0] + STRENGTH_AMOUNT + DESCRIPTIONS[1];
+    return DESCRIPTIONS[0] + DEXTERITY_AMOUNT + DESCRIPTIONS[1];
   }
 }
