@@ -8,12 +8,11 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import java.util.Objects;
 import thenoble.character.MyCharacter;
 import thenoble.powers.ConfidencePower;
 import thenoble.relics.BaseRelic;
 import thenoble.relics.basic.CloudyMonocle;
-
-import java.util.Objects;
 
 public class ClearMonocle extends BaseRelic {
   private static final String NAME = "ClearMonocle";

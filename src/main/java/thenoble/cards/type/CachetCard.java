@@ -6,14 +6,20 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 import thenoble.cards.NobleCard;
 import thenoble.powers.ConfidencePower;
+import thenoble.relics.rare.SelfieStick;
 import thenoble.relics.rare.WoodenDeckBox;
+import thenoble.relics.type.CachetRelic;
 import thenoble.util.CardStats;
 
 public abstract class CachetCard extends NobleCard {
+  private static final ArrayList<String> CACHET_RELICS =
+      new ArrayList<String>(Arrays.asList(SelfieStick.ID));
 
   public CachetCard(String ID, CardStats info) {
     super(ID, info);
@@ -32,17 +38,6 @@ public abstract class CachetCard extends NobleCard {
     return 0;
   }
 
-  protected void onCachet() {
-    int cachetTimes = cachetAmount();
-
-    //    for (int i = 0; i < cachetTimes; i++) {
-    //      // You can do stuff here if you need to.
-    //    }
-    if (AbstractDungeon.player.hasRelic(WoodenDeckBox.ID)) {
-      addToBot(new DrawCardAction(AbstractDungeon.player, 1));
-    }
-  }
-
   /**
    * This method must be called by your cachet card in order to apply its effect.
    *
@@ -52,14 +47,26 @@ public abstract class CachetCard extends NobleCard {
    *     overridden by your cachet card in order to apply its effect.
    */
   public void triggerCachetEffect(AbstractPlayer player, AbstractMonster monster, int cachetTimes) {
-    onCachet(); // Things that happen before cachet.
+    //    onCachet(); // Things that happen before cachet.
+
+    int cachetCount = cachetAmount();
 
     for (int i = 0; i < cachetTimes; i++) {
       cachetEffect(player, monster);
-      // Here's where you can trigger relics that care about cachet loops
     }
 
     addToBot(new RemoveSpecificPowerAction(player, player, ConfidencePower.POWER_ID));
+
+    if (AbstractDungeon.player.hasRelic(WoodenDeckBox.ID)) {
+      addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+    }
+
+    for (AbstractRelic abstractRelic : AbstractDungeon.player.relics) {
+      if (CACHET_RELICS.contains(abstractRelic.relicId)) {
+        CachetRelic relic = (CachetRelic) abstractRelic;
+        relic.increment(cachetCount);
+      }
+    }
   }
 
   /**
@@ -72,15 +79,35 @@ public abstract class CachetCard extends NobleCard {
    */
   public void triggerCachetEffect(
       AbstractPlayer player, ArrayList<AbstractMonster> monsters, int cachetTimes) {
-    onCachet(); // Things that happen before cachet.
+    //    onCachet(); // Things that happen before cachet.
+
+    int cachetCount = cachetAmount();
 
     for (int i = 0; i < cachetTimes; i++) {
       cachetEffect(player, monsters);
-      // Here's where you can trigger relics that care about cachet
     }
 
     addToBot(new RemoveSpecificPowerAction(player, player, ConfidencePower.POWER_ID));
+
+    if (AbstractDungeon.player.hasRelic(WoodenDeckBox.ID)) {
+      addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+    }
+
+    for (AbstractRelic abstractRelic : AbstractDungeon.player.relics) {
+      if (Objects.equals(abstractRelic.relicId, SelfieStick.ID)) {
+        CachetRelic relic = (CachetRelic) abstractRelic;
+        relic.increment(cachetCount);
+      }
+    }
   }
+
+  //  protected void onCachet() {
+  //    int cachetTimes = cachetAmount();
+  //
+  //        for (int i = 0; i < cachetTimes; i++) {
+  //          // You can do stuff here if you need to.
+  //        }
+  //  }
 
   /**
    * This method can be overridden by your cachet card in order to describe its effect.

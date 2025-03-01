@@ -37,6 +37,14 @@
       " #yConfidence."
     ]
   },
+  "${modID}:SelfieStick": {
+    "NAME": "Selfie Stick",
+    "FLAVOR": "Look good from every angle.",
+    "DESCRIPTIONS": [
+      "Every time you spend 3 #yConfidence, gain #b",
+      " #yStrength."
+    ]
+  },
   "${modID}:SilverFlute": {
     "NAME": "Silver Flute",
     "FLAVOR": "One of these days you'll learn to play it.",
