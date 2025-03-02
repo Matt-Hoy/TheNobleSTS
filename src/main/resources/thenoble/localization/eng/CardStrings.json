@@ -198,7 +198,7 @@
   },
   "${modID}:SpinTheNarrative": {
     "NAME": "Spin the Narrative",
-    "DESCRIPTION": "Deal !D! damage. Gain !B! Block for every stack of debuff on ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Deal !D! damage for each card in your hand."
   },
   "${modID}:TargetedCriticism": {
     "NAME": "Targeted Criticism",

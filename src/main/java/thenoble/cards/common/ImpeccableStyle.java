@@ -16,7 +16,7 @@ public class ImpeccableStyle extends NobleCard {
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY, 1);
-  private static final int MAGIC = 1;
+  private static final int MAGIC = 0;
 
   public ImpeccableStyle() {
     super(ID, INFO);
@@ -27,7 +27,7 @@ public class ImpeccableStyle extends NobleCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    if (getConfStacks() > 0) {
+    if (magicNumber > 0 || getConfStacks() > 0) {
       addToBot(
           new ApplyPowerAction(
               monster, player, new AdvantagePower(monster, magicNumber), magicNumber));
