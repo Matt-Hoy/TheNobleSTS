@@ -2,45 +2,24 @@ package thenoble.powers;
 
 import static thenoble.TheNoble.makeID;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
+import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import java.util.Objects;
+import javassist.CtClass;
+import org.apache.commons.lang3.StringUtils;
 import thenoble.cards.type.CachetCard;
 
-public class ConfidencePower extends BasePower implements BetterOnApplyPowerPower {
+public class ConfidencePower extends BasePower
+    implements OnCreateCardInterface { // implements BetterOnApplyPowerPower {
   public static final String POWER_ID = makeID("Confidence");
   private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
   private static final boolean TURN_BASED = false;
 
   public ConfidencePower(AbstractCreature owner, int amount) {
     super(POWER_ID, TYPE, TURN_BASED, owner, amount);
-  }
-
-  @Override
-  public boolean betterOnApplyPower(
-      AbstractPower power, AbstractCreature creature, AbstractCreature creature1) {
-    if (Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
-      return true;
-    }
-    int confStacks = getConfStacks();
-    if (confStacks > 0 && !Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
-      // important to note that this means you cannot use Confidence with powers that increase
-      // strength by 0.
-      if (power.amount == 0 && Objects.equals(power.ID, StrengthPower.POWER_ID)) {
-        power.amount -= confStacks;
-      } else if (power.amount >= 0) {
-        power.amount += confStacks;
-      } else {
-        power.amount -= confStacks;
-      }
-      power.updateDescription();
-      return true;
-    }
-    return false;
   }
 
   public static int getConfStacks() {
@@ -57,34 +36,42 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
   }
 
   @Override
-  public int betterOnApplyPowerStacks(
-      AbstractPower power, AbstractCreature target, AbstractCreature source, int stackAmount) {
-    // && !Objects.equals(power.ID, ConfidencePower.POWER_ID)
-    if (source == owner && !Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
-      if (Objects.equals(power.ID, StrengthPower.POWER_ID) && stackAmount == 0) {
-        return stackAmount - getConfStacks();
-      } else if (stackAmount >= 0 || Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
-        return stackAmount + getConfStacks();
-      } else {
-        return stackAmount - getConfStacks();
-      }
-    }
-    return stackAmount;
+  public void onInitialApplication() {
+    modMagicNumbers();
+  }
+
+  @Override
+  public void stackPower(int stackAmount) {
+    modMagicNumbers();
+    this.amount += stackAmount;
   }
 
   @Override
   public void onRemove() {
+    int stacks = getConfStacks();
     for (AbstractCard card : AbstractDungeon.player.hand.group) {
+      if (usesMagic(card)) {
+        card.magicNumber -= stacks;
+        card.isMagicNumberModified = false;
+      }
       if (card instanceof CachetCard) {
         ((CachetCard) card).onConfidenceRemoved();
       }
     }
     for (AbstractCard card : AbstractDungeon.player.discardPile.group) {
+      if (usesMagic(card)) {
+        card.magicNumber -= stacks;
+        card.isMagicNumberModified = false;
+      }
       if (card instanceof CachetCard) {
         ((CachetCard) card).onConfidenceRemoved();
       }
     }
     for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
+      if (usesMagic(card)) {
+        card.magicNumber -= stacks;
+        card.isMagicNumberModified = false;
+      }
       if (card instanceof CachetCard) {
         ((CachetCard) card).onConfidenceRemoved();
       }
@@ -94,5 +81,38 @@ public class ConfidencePower extends BasePower implements BetterOnApplyPowerPowe
   @Override
   public void updateDescription() {
     this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+  }
+
+  private static void modMagicNumbers() {
+    for (AbstractCard card : AbstractDungeon.player.hand.group) {
+      if (usesMagic(card)) {
+        card.magicNumber++;
+        card.isMagicNumberModified = true;
+      }
+    }
+    for (AbstractCard card : AbstractDungeon.player.discardPile.group) {
+      if (usesMagic(card)) {
+        card.magicNumber++;
+        card.isMagicNumberModified = true;
+      }
+    }
+    for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
+      if (usesMagic(card)) {
+        card.magicNumber++;
+        card.isMagicNumberModified = true;
+      }
+    }
+  }
+
+  private static boolean usesMagic(AbstractCard card) {
+    return (card.baseMagicNumber > 0 || StringUtils.containsIgnoreCase(card.rawDescription, "!M!"));
+  }
+
+  @Override
+  public void onCreateCard(AbstractCard card) {
+    if (usesMagic(card)) {
+      card.magicNumber += getConfStacks();
+      card.isMagicNumberModified = true;
+    }
   }
 }
