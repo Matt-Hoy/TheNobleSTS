@@ -1,6 +1,6 @@
 package thenoble.cards.rare;
 
-// TODO: Demoralize Still Don't Work
+import static thenoble.powers.ConfidencePower.getConfStacks;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,8 +10,6 @@ import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
 import thenoble.powers.BigTalkerPower;
 import thenoble.util.CardStats;
-
-import static thenoble.powers.ConfidencePower.getConfStacks;
 
 public class BigTalker extends NobleCard {
   public static final String ID = makeID("BigTalker");
