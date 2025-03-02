@@ -20,7 +20,7 @@ import thenoble.util.CardStats;
 
 public abstract class CachetCard extends NobleCard {
   private static final ArrayList<String> CACHET_RELICS =
-      new ArrayList<String>(Arrays.asList(SelfieStick.ID, DanceCertificate.ID));
+      new ArrayList<>(Arrays.asList(SelfieStick.ID, DanceCertificate.ID));
 
   public CachetCard(String ID, CardStats info) {
     super(ID, info);
