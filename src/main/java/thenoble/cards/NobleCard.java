@@ -731,6 +731,16 @@ public abstract class NobleCard extends CustomCard {
     }
   }
 
+  public int countAllPowers(AbstractMonster target) {
+    int total = 0;
+    for (AbstractPower individualPower : target.powers) {
+      if (individualPower.type == AbstractPower.PowerType.DEBUFF) {
+        total += individualPower.amount;
+      }
+    }
+    return total;
+  }
+
   protected static class LocalVarInfo {
     int base, value, upgrade;
     int[] aoeValue = null;

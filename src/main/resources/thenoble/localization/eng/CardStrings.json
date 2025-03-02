@@ -196,6 +196,10 @@
     "NAME": "Slap",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "${modID}:TargetedCriticism": {
+    "NAME": "Targeted Criticism",
+    "DESCRIPTION": "${modID}:Cachet: Deal !D! damage for every stack of debuff on ALL enemies."
+  },
   "${modID}:ThickSkin": {
     "NAME": "Thick Skin",
     "DESCRIPTION": "Gain !M! Metallicize."

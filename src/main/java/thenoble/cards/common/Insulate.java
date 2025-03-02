@@ -22,16 +22,6 @@ public class Insulate extends NobleCard {
     setCostUpgrade(0);
   }
 
-  private int countAllPowers(AbstractMonster target) {
-    int total = 0;
-    for (AbstractPower individualPower : target.powers) {
-      if (individualPower.type == AbstractPower.PowerType.DEBUFF) {
-        total += individualPower.amount;
-      }
-    }
-    return total;
-  }
-
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new GainBlockAction(player, player, countAllPowers(monster) + dexCheck(player)));
