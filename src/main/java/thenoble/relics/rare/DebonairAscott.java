@@ -1,4 +1,4 @@
-package thenoble.relics.common;
+package thenoble.relics.rare;
 
 import static thenoble.TheNoble.makeID;
 
@@ -13,8 +13,8 @@ import thenoble.relics.BaseRelic;
 public class DebonairAscott extends BaseRelic {
   private static final String NAME = "DebonairAscott";
   public static final String ID = makeID(NAME);
-  private static final RelicTier RARITY = RelicTier.COMMON;
-  private static final LandingSound SOUND = LandingSound.CLINK;
+  private static final RelicTier RARITY = RelicTier.RARE;
+  private static final LandingSound SOUND = LandingSound.FLAT;
   private static final int CONFIDENCE_AMOUNT = 1;
 
   public DebonairAscott() {

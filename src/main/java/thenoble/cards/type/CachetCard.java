@@ -14,7 +14,7 @@ import thenoble.cards.NobleCard;
 import thenoble.powers.ConfidencePower;
 import thenoble.relics.rare.DanceCertificate;
 import thenoble.relics.rare.SelfieStick;
-import thenoble.relics.rare.WoodenDeckBox;
+import thenoble.relics.common.WoodenDeckBox;
 import thenoble.relics.type.CachetRelic;
 import thenoble.util.CardStats;
 

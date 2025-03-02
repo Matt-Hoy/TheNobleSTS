@@ -190,6 +190,10 @@
     "NAME": "Shopping Spree",
     "DESCRIPTION": "Whenever you play a power, gain !M! block."
   },
+  "${modID}:SickBurn": {
+    "NAME": "Sick Burn",
+    "DESCRIPTION": "Gain !M! Thorns."
+  },
   "${modID}:SideEye": {
     "NAME": "Side Eye",
     "DESCRIPTION": "Apply !M! Poison. Draw a card."

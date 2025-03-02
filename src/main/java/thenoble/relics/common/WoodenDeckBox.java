@@ -1,4 +1,4 @@
-package thenoble.relics.rare;
+package thenoble.relics.common;
 
 import static thenoble.TheNoble.makeID;
 
@@ -9,7 +9,7 @@ import thenoble.relics.BaseRelic;
 public class WoodenDeckBox extends BaseRelic {
   private static final String NAME = "WoodenDeckBox";
   public static final String ID = makeID(NAME);
-  private static final RelicTier RARITY = RelicTier.RARE;
+  private static final RelicTier RARITY = RelicTier.COMMON;
   private static final LandingSound SOUND = LandingSound.FLAT;
 
   public WoodenDeckBox() {
