@@ -139,6 +139,11 @@
     "NAME": "Patron",
     "DESCRIPTION": "Whenever you play a power, add a random power card into your hand."
   },
+  "${modID}:PenPals": {
+    "NAME": "Pen Pals",
+    "DESCRIPTION": "Whenever you draw a card, deal !M! damage to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Innate. Whenever you draw a card, deal !M! damage to ALL enemies."
+  },
   "${modID}:PracticedAffect": {
     "NAME": "Practiced Affect",
     "DESCRIPTION": "Whenever you play a skill, gain !M! block.",

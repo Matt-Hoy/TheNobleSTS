@@ -70,6 +70,13 @@
       " random power card(s) into your hand."
     ]
   },
+  "${modID}:PenPals": {
+    "NAME": "Pen Pals",
+    "DESCRIPTIONS": [
+      "Whenever you draw a card, deal #b",
+      " damage to ALL enemies."
+    ]
+  },
   "${modID}:PracticedAffect": {
     "NAME": "Practiced Affect",
     "DESCRIPTIONS": [
