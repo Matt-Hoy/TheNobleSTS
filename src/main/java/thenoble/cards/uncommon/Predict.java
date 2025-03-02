@@ -4,27 +4,28 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.AllEnemyApplyPowerActi
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.watcher.BlockReturnPower;
 import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
 
-public class HookahLounge extends NobleCard {
-  public static final String ID = makeID("HookahLounge");
+public class Predict extends NobleCard {
+  public static final String ID = makeID("Predict");
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR,
           CardType.SKILL,
           CardRarity.UNCOMMON,
           CardTarget.ALL_ENEMY,
-          0);
+          1);
   private static final int MAGIC = 1;
-  private static final int UPG_MAGIC = 1;
 
-  public HookahLounge() {
+  public Predict() {
     super(ID, INFO);
 
-    setMagic(MAGIC, UPG_MAGIC);
+    setMagic(MAGIC);
+    setCostUpgrade(0);
+    setExhaust(true);
   }
 
   @Override
@@ -33,11 +34,11 @@ public class HookahLounge extends NobleCard {
         new AllEnemyApplyPowerAction(
             player,
             magicNumber,
-            (individualMonster) -> (new PoisonPower(individualMonster, player, magicNumber))));
+            (individualMonster) -> new BlockReturnPower(individualMonster, magicNumber)));
   }
 
   @Override
   public AbstractCard makeCopy() {
-    return new HookahLounge();
+    return new Predict();
   }
 }

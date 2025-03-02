@@ -1,6 +1,6 @@
 package thenoble.cards.rare;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.AllEnemyApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,14 +32,11 @@ public class Dissuade extends CachetCard {
 
   @Override
   public void cachetEffect(AbstractPlayer player, ArrayList<AbstractMonster> monsters) {
-    for (AbstractMonster individualMonster : monsters) {
-      addToBot(
-          new ApplyPowerAction(
-              individualMonster,
-              player,
-              new StrengthPower(individualMonster, -magicNumber),
-              -magicNumber));
-    }
+    addToBot(
+        new AllEnemyApplyPowerAction(
+            player,
+            -magicNumber,
+            (individualMonster) -> (new StrengthPower(individualMonster, -magicNumber))));
   }
 
   @Override

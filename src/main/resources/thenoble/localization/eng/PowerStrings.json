@@ -13,6 +13,13 @@
       " #yPoison."
     ]
   },
+  "${modID}:BigTalker": {
+    "NAME": "Big Talker",
+    "DESCRIPTIONS": [
+      "Whenever you play a skill, apply #b",
+      " #yDemoralize to ALL enemies."
+    ]
+  },
   "${modID}:CharismaForm": {
     "NAME": "Charisma Form",
     "DESCRIPTIONS": [

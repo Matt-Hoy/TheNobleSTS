@@ -20,6 +20,10 @@
     "NAME": "Bad Attitude",
     "DESCRIPTION": "Whenever you play a power, ALL enemies gain !M! Poison."
   },
+  "${modID}:BigTalker": {
+    "NAME": "Big Talker",
+    "DESCRIPTION": "Whenever you play a skill, apply !M! Demoralize to ALL enemies."
+  },
   "${modID}:ConfidenceTest": {
     "NAME": "Confidence Test",
     "DESCRIPTION": "Gain 1 ${modID}:Confidence."
@@ -139,6 +143,10 @@
     "NAME": "Practiced Affect",
     "DESCRIPTION": "Whenever you play a skill, gain !M! block.",
     "UPGRADE_DESCRIPTION": "Innate. Whenever you play a skill, gain !M! block."
+  },
+  "${modID}:Predict": {
+    "NAME": "Predict",
+    "DESCRIPTION": "Whenever you attack any enemy, gain !M! Block. Exhaust."
   },
   "${modID}:Preempt": {
     "NAME": "Preempt",

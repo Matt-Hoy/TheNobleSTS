@@ -1,10 +1,9 @@
 package thenoble.cards.common;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.AllEnemyApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import thenoble.cards.NobleCard;
@@ -31,11 +30,11 @@ public class Gossip extends NobleCard {
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new GainBlockAction(player, block));
-    for (AbstractMonster individualMonster : AbstractDungeon.getMonsters().monsters) {
-      addToBot(
-          new ApplyPowerAction(
-              individualMonster, player, new PoisonPower(individualMonster, player, magicNumber)));
-    }
+    addToBot(
+        new AllEnemyApplyPowerAction(
+            player,
+            magicNumber,
+            (individualMonster) -> (new PoisonPower(individualMonster, player, magicNumber))));
   }
 
   @Override

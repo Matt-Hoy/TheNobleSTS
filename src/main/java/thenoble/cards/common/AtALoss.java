@@ -1,9 +1,8 @@
 package thenoble.cards.common;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.AllEnemyApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ChokePower;
 import thenoble.cards.NobleCard;
@@ -31,11 +30,11 @@ public class AtALoss extends NobleCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    for (AbstractMonster individualMonster : AbstractDungeon.getMonsters().monsters) {
-      addToBot(
-          new ApplyPowerAction(
-              individualMonster, player, new ChokePower(individualMonster, magicNumber)));
-    }
+    addToBot(
+        new AllEnemyApplyPowerAction(
+            player,
+            magicNumber,
+            (individualMonster) -> (new ChokePower(individualMonster, magicNumber))));
   }
 
   @Override

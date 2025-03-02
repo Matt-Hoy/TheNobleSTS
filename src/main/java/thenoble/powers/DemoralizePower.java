@@ -1,4 +1,4 @@
-package thenoble.deprecated;
+package thenoble.powers;
 
 import static thenoble.TheNoble.makeID;
 
@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import thenoble.powers.BasePower;
 
 public class DemoralizePower extends BasePower {
   public static final String POWER_ID = makeID("Demoralize");
@@ -21,7 +20,6 @@ public class DemoralizePower extends BasePower {
     super(POWER_ID, TYPE, TURN_BASED, owner, amount);
   }
 
-  // TODO This does not work.
   @Override
   public void wasHPLost(DamageInfo info, int damageAmount) {
     if (info.type == DamageInfo.DamageType.NORMAL && damageAmount > 0) {
@@ -37,13 +35,10 @@ public class DemoralizePower extends BasePower {
               AbstractDungeon.player,
               new LoseStrengthPower(AbstractDungeon.player, amount)));
       addToBot(
-          new ApplyPowerAction(
-              owner, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -amount)));
+          new ApplyPowerAction(owner, AbstractDungeon.player, new StrengthPower(owner, -amount)));
       addToBot(
           new ApplyPowerAction(
-              owner,
-              AbstractDungeon.player,
-              new GainStrengthPower(AbstractDungeon.player, amount)));
+              owner, AbstractDungeon.player, new GainStrengthPower(owner, amount)));
       addToBot(
           new RemoveSpecificPowerAction(owner, AbstractDungeon.player, DemoralizePower.POWER_ID));
     }

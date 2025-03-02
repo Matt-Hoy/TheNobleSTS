@@ -20,7 +20,6 @@ public class CuttingWords extends CachetCard {
 
   public CuttingWords() {
     super(ID, INFO);
-    //    isMultiDamage = true;
 
     setDamage(DAMAGE, UPG_DAMAGE);
   }
