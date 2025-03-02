@@ -30,7 +30,7 @@
   "${modID}:Confidence": {
     "NAME": "Confidence",
     "DESCRIPTIONS": [
-      "Whenever you apply another buff or debuff, increase the number of stacks by #b",
+      "Increase all non-damage and non-Block card effects by #b",
       "."
     ]
   },
