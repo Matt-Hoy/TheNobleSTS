@@ -18,7 +18,7 @@ public class AntiquePistol extends CachetCard {
   public static final String ID = makeID("AntiquePistol");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY, 1);
+          MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, 1);
   private static final int MAGIC = 4;
   private static final int UPG_MAGIC = 7;
   private static final int CACHET_TIMES = 1;

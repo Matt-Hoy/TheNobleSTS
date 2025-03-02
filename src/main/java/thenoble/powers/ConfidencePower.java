@@ -48,7 +48,7 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
   public void onRemove() {
     int stacks = getConfStacks();
     for (AbstractCard card : AbstractDungeon.player.hand.group) {
-      if (usesMagic(card)) {
+      if (usesMagic(card) && card.isMagicNumberModified) {
         card.magicNumber -= stacks;
         card.isMagicNumberModified = false;
       }
@@ -57,7 +57,7 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
       }
     }
     for (AbstractCard card : AbstractDungeon.player.discardPile.group) {
-      if (usesMagic(card)) {
+      if (usesMagic(card) && card.isMagicNumberModified) {
         card.magicNumber -= stacks;
         card.isMagicNumberModified = false;
       }
@@ -66,7 +66,7 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
       }
     }
     for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
-      if (usesMagic(card)) {
+      if (usesMagic(card) && card.isMagicNumberModified) {
         card.magicNumber -= stacks;
         card.isMagicNumberModified = false;
       }
@@ -88,22 +88,19 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
         card.isMagicNumberModified = true;
       }
     }
-    for (AbstractCard card : AbstractDungeon.player.discardPile.group) {
-      if (usesMagic(card)) {
-        card.magicNumber++;
-        card.isMagicNumberModified = true;
-      }
-    }
-    for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
-      if (usesMagic(card)) {
-        card.magicNumber++;
-        card.isMagicNumberModified = true;
-      }
-    }
   }
 
   private static boolean usesMagic(AbstractCard card) {
-    return (card.baseMagicNumber > 0 || StringUtils.containsIgnoreCase(card.rawDescription, "!M!"));
+    return (card.baseMagicNumber >= 0
+        || StringUtils.containsIgnoreCase(card.rawDescription, "!M!"));
+  }
+
+  @Override
+  public void onCardDraw(AbstractCard card) {
+    if (usesMagic(card) && !card.isMagicNumberModified) {
+      card.magicNumber += getConfStacks();
+      card.isMagicNumberModified = true;
+    }
   }
 
   @Override

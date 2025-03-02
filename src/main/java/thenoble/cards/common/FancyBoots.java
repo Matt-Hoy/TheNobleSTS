@@ -21,7 +21,6 @@ public class FancyBoots extends NobleCard {
     super(ID, INFO);
 
     setMagic(MAGIC);
-    setCostUpgrade(0);
   }
 
   @Override
