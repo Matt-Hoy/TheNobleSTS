@@ -8,12 +8,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import java.util.Objects;
-import javassist.CtClass;
 import org.apache.commons.lang3.StringUtils;
 import thenoble.cards.type.CachetCard;
 
-public class ConfidencePower extends BasePower
-    implements OnCreateCardInterface { // implements BetterOnApplyPowerPower {
+public class ConfidencePower extends BasePower implements OnCreateCardInterface {
   public static final String POWER_ID = makeID("Confidence");
   private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
   private static final boolean TURN_BASED = false;
