@@ -196,6 +196,10 @@
     "NAME": "Slap",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "${modID}:SpinTheNarrative": {
+    "NAME": "Spin the Narrative",
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block for every stack of debuff on ALL enemies."
+  },
   "${modID}:TargetedCriticism": {
     "NAME": "Targeted Criticism",
     "DESCRIPTION": "${modID}:Cachet: Deal !D! damage for every stack of debuff on ALL enemies."
