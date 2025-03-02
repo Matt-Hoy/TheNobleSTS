@@ -24,6 +24,10 @@
     "NAME": "Big Talker",
     "DESCRIPTION": "Whenever you play a skill, apply !M! Demoralize to ALL enemies."
   },
+  "${modID}:BornOnThird": {
+    "NAME": "Born On Third",
+    "DESCRIPTION": "At the start of each turn, add !M! random Skill card(s) to your hand."
+  },
   "${modID}:ConfidenceTest": {
     "NAME": "Confidence Test",
     "DESCRIPTION": "Gain 1 ${modID}:Confidence."
@@ -129,7 +133,11 @@
   },
   "${modID}:InsultToInjury": {
     "NAME": "Insult To Injury",
-    "DESCRIPTION": "Deal !D! damage. Whenever you play a skill, return this from the discard pile to your Hand."
+    "DESCRIPTION": "Deal !D! damage. Whenever you play a skill, return this from the discard pile to your hand."
+  },
+  "${modID}:KeepInMind": {
+    "NAME": "Keep In Mind",
+    "DESCRIPTION": "Gain !B! Block. Retain !M! card(s) this turn."
   },
   "${modID}:OpenBar": {
     "NAME": "Open Bar",

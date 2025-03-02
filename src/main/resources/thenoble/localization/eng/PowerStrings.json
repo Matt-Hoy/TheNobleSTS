@@ -20,6 +20,13 @@
       " #yDemoralize to ALL enemies."
     ]
   },
+  "${modID}:BornOnThird": {
+    "NAME": "Born On Third",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add #b",
+      " random Skill card(s) to your hand."
+    ]
+  },
   "${modID}:CharismaForm": {
     "NAME": "Charisma Form",
     "DESCRIPTIONS": [
