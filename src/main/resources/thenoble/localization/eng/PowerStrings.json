@@ -70,6 +70,13 @@
       " card(s)."
     ]
   },
+  "${modID}:MakingDonations": {
+    "NAME": "Making Donations",
+    "DESCRIPTIONS": [
+      "Whenever a card is exhausted, gain #b",
+      " #yBlock."
+    ]
+  },
   "${modID}:Patron": {
     "NAME": "Patron",
     "DESCRIPTIONS": [

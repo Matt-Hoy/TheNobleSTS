@@ -135,6 +135,10 @@
     "NAME": "Keep In Mind",
     "DESCRIPTION": "Gain !B! Block. Select !M! card(s) to Retain this turn."
   },
+  "${modID}:MakingDonations": {
+    "NAME": "Making Donations",
+    "DESCRIPTION": "Whenever a card is exhausted, gain !M! block."
+  },
   "${modID}:OpenBar": {
     "NAME": "Open Bar",
     "DESCRIPTION": "Gain !M! Regen. Exhaust."
