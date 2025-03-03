@@ -41,6 +41,10 @@
     "DESCRIPTION": "Ethereal. At the start of each turn, gain !M! ${modID}:Confidence.",
     "UPGRADE_DESCRIPTION": "At the start of each turn, gain !M! ${modID}:Confidence."
   },
+  "${modID}:Commission": {
+    "NAME": "Commission",
+    "DESCRIPTION": "Gain a random potion. Exhaust."
+  },
   "${modID}:Condescend": {
     "NAME": "Condescend",
     "DESCRIPTION": "Deal !D! damage. Gain !B! Block. Apply !M! Vulnerable and !M! Weak."
