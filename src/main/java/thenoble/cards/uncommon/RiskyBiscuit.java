@@ -1,4 +1,4 @@
-package thenoble.cards.common;
+package thenoble.cards.uncommon;
 
 import static thenoble.powers.ConfidencePower.getConfStacks;
 
@@ -18,7 +18,7 @@ public class RiskyBiscuit extends CachetCard {
   public static final String ID = makeID("RiskyBiscuit");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, 3);
+          MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, 3);
   private static final int DAMAGE = 18;
   private static final int UPG_DAMAGE = 9;
 
