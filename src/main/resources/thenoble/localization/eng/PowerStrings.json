@@ -38,7 +38,7 @@
     "NAME": "Confidence",
     "DESCRIPTIONS": [
       "Increase all non-damage and non-Block card effects by #b",
-      "."
+      ". Max 3 stacks."
     ]
   },
   "${modID}:Demoralize": {

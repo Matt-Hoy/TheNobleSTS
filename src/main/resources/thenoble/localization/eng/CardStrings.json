@@ -191,8 +191,8 @@
   },
   "${modID}:SharpenYourTeeth": {
     "NAME": "Sharpen Your Teeth",
-    "DESCRIPTION": "Draw until you draw !M! Attack(s).",
-    "UPGRADE_DESCRIPTION": "Draw until you draw !M! Attacks."
+    "DESCRIPTION": "Draw until you draw !M! Attack(s). Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw until you draw !M! Attacks. Exhaust."
   },
   "${modID}:ShoppingSpree": {
     "NAME": "Shopping Spree",

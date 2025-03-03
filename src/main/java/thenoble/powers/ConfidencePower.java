@@ -40,8 +40,10 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
 
   @Override
   public void stackPower(int stackAmount) {
-    modMagicNumbers();
-    this.amount += stackAmount;
+    if (getConfStacks() < 3) {
+      modMagicNumbers();
+      this.amount += stackAmount;
+    }
   }
 
   @Override
