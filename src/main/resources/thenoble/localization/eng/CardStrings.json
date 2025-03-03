@@ -234,13 +234,17 @@
     "NAME": "Targeted Criticism",
     "DESCRIPTION": "${modID}:Cachet: Deal !D! damage for every stack of debuff on ALL enemies."
   },
-  "${modID}:ThickSkin": {
-    "NAME": "Thick Skin",
-    "DESCRIPTION": "Gain !M! Metallicize. Exhaust."
+  "${modID}:TheBestWords": {
+    "NAME": "The Best Words",
+    "DESCRIPTION": "Gain !B! Block. Whenever you play a card this turn, ALL enemies lose !M! HP."
   },
   "${modID}:TheDuster": {
     "NAME": "The Duster",
     "DESCRIPTION": "Gain !M! Buffer. Exhaust."
+  },
+  "${modID}:ThickSkin": {
+    "NAME": "Thick Skin",
+    "DESCRIPTION": "Gain !M! Metallicize. Exhaust."
   },
   "${modID}:ThrowTheGlove": {
     "NAME": "Throw The Glove",

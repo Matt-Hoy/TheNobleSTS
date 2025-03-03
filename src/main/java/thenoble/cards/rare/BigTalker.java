@@ -1,6 +1,6 @@
 package thenoble.cards.rare;
 
-import static thenoble.powers.ConfidencePower.getConfStacks;
+import static thenoble.cards.type.CachetCard.cachetAmount;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -27,7 +27,7 @@ public class BigTalker extends NobleCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    if (magicNumber > 0 || getConfStacks() > 0) {
+    if (magicNumber > 0 || cachetAmount() > 0) {
       addToBot(
           new ApplyPowerAction(
               player, player, new BigTalkerPower(player, magicNumber), magicNumber));

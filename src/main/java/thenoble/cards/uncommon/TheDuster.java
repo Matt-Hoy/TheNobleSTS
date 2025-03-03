@@ -1,6 +1,6 @@
 package thenoble.cards.uncommon;
 
-import static thenoble.powers.ConfidencePower.getConfStacks;
+import static thenoble.cards.type.CachetCard.cachetAmount;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -29,7 +29,7 @@ public class TheDuster extends NobleCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    if (getConfStacks() > 0 || magicNumber > 0) {
+    if (cachetAmount() > 0 || magicNumber > 0) {
       addToBot(new ApplyPowerAction(player, player, new BufferPower(player, magicNumber)));
     }
   }

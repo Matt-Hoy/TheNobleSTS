@@ -1,6 +1,6 @@
 package thenoble.cards.rare;
 
-import static thenoble.powers.ConfidencePower.getConfStacks;
+import static thenoble.cards.type.CachetCard.cachetAmount;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -32,7 +32,7 @@ public class FuzzyIdeas extends NobleCard {
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new GainBlockAction(player, player, block));
-    int confStacks = getConfStacks();
+    int confStacks = cachetAmount();
     if (magicNumber > 0 || confStacks > 0) {
       addToBot(new ApplyPowerAction(player, player, new BlurPower(player, magicNumber)));
     }

@@ -1,7 +1,5 @@
 package thenoble.cards.uncommon;
 
-import static thenoble.powers.ConfidencePower.getConfStacks;
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,7 +24,7 @@ public class WideSwipe extends CachetCard {
   public WideSwipe() {
     super(ID, INFO);
     if (AbstractDungeon.player != null && AbstractDungeon.combatRewardScreen.rewards.isEmpty()) {
-      int confStacks = getConfStacks();
+      int confStacks = cachetAmount();
       if (confStacks > 0) {
         target = CardTarget.ALL_ENEMY;
       }

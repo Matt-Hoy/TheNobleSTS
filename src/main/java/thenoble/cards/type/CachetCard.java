@@ -30,7 +30,10 @@ public abstract class CachetCard extends NobleCard {
 
   public void onConfidenceRemoved() {}
 
-  public int cachetAmount() {
+  public static int cachetAmount() {
+    if (AbstractDungeon.player == null) {
+      return 0;
+    }
     for (AbstractPower individualPower : AbstractDungeon.player.powers) {
       if (Objects.equals(individualPower.ID, ConfidencePower.POWER_ID)) {
         return individualPower.amount;

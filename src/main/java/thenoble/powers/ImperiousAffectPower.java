@@ -1,7 +1,7 @@
 package thenoble.powers;
 
 import static thenoble.TheNoble.makeID;
-import static thenoble.powers.ConfidencePower.getConfStacks;
+import static thenoble.cards.type.CachetCard.cachetAmount;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -22,7 +22,7 @@ public class ImperiousAffectPower extends BasePower {
   public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
     if (info.type == DamageInfo.DamageType.NORMAL && damageAmount > 0) {
       flash();
-      if (getConfStacks() > 0 || amount > 0) {
+      if (cachetAmount() > 0 || amount > 0) {
         addToBot(
             new ApplyPowerAction(
                 target, AbstractDungeon.player, new VulnerablePower(target, amount, false)));

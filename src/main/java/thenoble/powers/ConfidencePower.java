@@ -1,13 +1,13 @@
 package thenoble.powers;
 
 import static thenoble.TheNoble.makeID;
+import static thenoble.cards.type.CachetCard.cachetAmount;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import java.util.Objects;
 import org.apache.commons.lang3.StringUtils;
 import thenoble.cards.type.CachetCard;
 
@@ -20,19 +20,6 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
     super(POWER_ID, TYPE, TURN_BASED, owner, amount);
   }
 
-  public static int getConfStacks() {
-    if (AbstractDungeon.player == null) {
-      return 0;
-    }
-    int confStacks = 0;
-    for (AbstractPower power : AbstractDungeon.player.powers) {
-      if (Objects.equals(power.ID, ConfidencePower.POWER_ID)) {
-        confStacks = power.amount;
-      }
-    }
-    return confStacks;
-  }
-
   @Override
   public void onInitialApplication() {
     modMagicNumbers();
@@ -40,7 +27,7 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
 
   @Override
   public void stackPower(int stackAmount) {
-    if (getConfStacks() < 3) {
+    if (cachetAmount() < 3) {
       modMagicNumbers();
       this.amount += stackAmount;
     }
@@ -48,7 +35,7 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
 
   @Override
   public void onRemove() {
-    int stacks = getConfStacks();
+    int stacks = cachetAmount();
     for (AbstractCard card : AbstractDungeon.player.hand.group) {
       if (usesMagic(card) && card.isMagicNumberModified) {
         card.magicNumber -= stacks;
@@ -100,7 +87,7 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
   @Override
   public void onCardDraw(AbstractCard card) {
     if (usesMagic(card) && !card.isMagicNumberModified) {
-      card.magicNumber += getConfStacks();
+      card.magicNumber += cachetAmount();
       card.isMagicNumberModified = true;
     }
   }
@@ -108,7 +95,7 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
   @Override
   public void onCreateCard(AbstractCard card) {
     if (usesMagic(card)) {
-      card.magicNumber += getConfStacks();
+      card.magicNumber += cachetAmount();
       card.isMagicNumberModified = true;
     }
   }
