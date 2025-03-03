@@ -137,7 +137,7 @@
   },
   "${modID}:KeepInMind": {
     "NAME": "Keep In Mind",
-    "DESCRIPTION": "Gain !B! Block. Retain !M! card(s) this turn."
+    "DESCRIPTION": "Gain !B! Block. Select !M! card(s) to Retain this turn."
   },
   "${modID}:OpenBar": {
     "NAME": "Open Bar",
@@ -245,7 +245,7 @@
   },
   "${modID}:WeightRoom": {
     "NAME": "Weight Room",
-    "DESCRIPTION": "Whenever you play a skill this turn, gain !M! Strength."
+    "DESCRIPTION": "Whenever you play a skill this turn, gain !M! temporary Strength."
   },
   "${modID}:WideSwipe": {
     "NAME": "Wide Swipe",

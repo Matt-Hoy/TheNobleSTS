@@ -1,11 +1,10 @@
 package thenoble.cards.uncommon;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.RetainCardPower;
 import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
@@ -29,7 +28,7 @@ public class KeepInMind extends NobleCard {
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new GainBlockAction(player, block));
-    addToBot(new ApplyPowerAction(player, player, new RetainCardPower(player, magicNumber)));
+    addToBot(new RetainCardsAction(player, magicNumber));
   }
 
   @Override
