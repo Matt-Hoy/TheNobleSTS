@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
+import thenoble.powers.ConfidencePower;
 import thenoble.powers.ImperiousAffectPower;
 import thenoble.util.CardStats;
 
@@ -25,7 +26,9 @@ public class ImperiousAffect extends NobleCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    addToBot(new ApplyPowerAction(player, player, new ImperiousAffectPower(player, magicNumber)));
+    if (magicNumber > 0 || player.hasPower(ConfidencePower.POWER_ID)) {
+      addToBot(new ApplyPowerAction(player, player, new ImperiousAffectPower(player, magicNumber)));
+    }
   }
 
   @Override

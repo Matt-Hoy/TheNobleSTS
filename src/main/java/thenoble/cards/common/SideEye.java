@@ -32,9 +32,9 @@ public class SideEye extends NobleCard {
   public void use(AbstractPlayer player, AbstractMonster monster) {
     addToBot(
         new AllEnemyApplyPowerAction(
-            monster,
+            player,
             magicNumber,
-            (individualMonster) -> (new PoisonPower(monster, player, magicNumber))));
+            (individualMonster) -> (new PoisonPower(individualMonster, player, magicNumber))));
     addToBot(new DrawCardAction(player, magicNumber));
   }
 

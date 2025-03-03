@@ -236,8 +236,7 @@
   },
   "${modID}:ThrowTheGlove": {
     "NAME": "Throw The Glove",
-    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards equal to your ${modID}:Confidence.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards equal to your ${modID}:Confidence + 1."
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards until your hand is full. Exhaust."
   },
   "${modID}:Undermine": {
     "NAME": "Undermine",
