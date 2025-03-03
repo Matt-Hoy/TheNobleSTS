@@ -3,6 +3,7 @@ package thenoble.cards.common;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,6 +33,7 @@ public class Question extends CachetCard {
   @Override
   public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new ApplyPowerAction(monster, player, new StrengthPower(monster, -magicNumber)));
+    exhaust = true;
   }
 
   @Override

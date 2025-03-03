@@ -116,7 +116,7 @@
   },
   "${modID}:ImpeccableStyle": {
     "NAME": "Impeccable Style",
-    "DESCRIPTION": "Apply !M! ${modID}:Advantage."
+    "DESCRIPTION": "Apply !M! ${modID}:Advantage. Exhaust."
   },
   "${modID}:ImperiousAffect": {
     "NAME": "Imperious Affect",
@@ -126,10 +126,6 @@
     "NAME": "Inheritance",
     "DESCRIPTION": "Whenever you play a power, draw a card.",
     "UPGRADE_DESCRIPTION": "Innate. Whenever you play a power, draw a card."
-  },
-  "${modID}:Insulate": {
-    "NAME": "Insulate",
-    "DESCRIPTION": "Gain 2 Block for every stack of every debuff on target enemy."
   },
   "${modID}:InsultToInjury": {
     "NAME": "Insult To Injury",
@@ -171,7 +167,7 @@
   },
   "${modID}:Question": {
     "NAME": "Question",
-    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Enemy loses !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Enemy loses !M! Strength. Exhaust."
   },
   "${modID}:RapidRiposte": {
     "NAME": "Rapid Riposte",
@@ -204,7 +200,7 @@
   },
   "${modID}:SideEye": {
     "NAME": "Side Eye",
-    "DESCRIPTION": "Apply !M! Poison. Draw a card."
+    "DESCRIPTION": "Apply !M! Poison to ALL enemies. Draw !M! card(s)."
   },
   "${modID}:SillyAffect": {
     "NAME": "Silly Affect",

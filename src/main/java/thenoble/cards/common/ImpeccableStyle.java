@@ -23,6 +23,7 @@ public class ImpeccableStyle extends NobleCard {
 
     setMagic(MAGIC);
     setCostUpgrade(0);
+    setExhaust(true);
   }
 
   @Override

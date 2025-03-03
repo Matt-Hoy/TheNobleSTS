@@ -15,7 +15,7 @@ public class SpinTheNarrative extends CachetCard {
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, 1);
-  private static final int DAMAGE = 4;
+  private static final int DAMAGE = 5;
   private static final int UPG_DAMAGE = 1;
   private static final int MAGIC = 1;
 

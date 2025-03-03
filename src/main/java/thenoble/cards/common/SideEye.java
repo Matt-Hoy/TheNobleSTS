@@ -1,5 +1,6 @@
 package thenoble.cards.common;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.AllEnemyApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,21 +15,28 @@ public class SideEye extends NobleCard {
   public static final String ID = makeID("SideEye");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY, 0);
+          MyCharacter.Meta.CARD_COLOR,
+          CardType.SKILL,
+          CardRarity.UNCOMMON,
+          CardTarget.ALL_ENEMY,
+          1);
   private static final int MAGIC = 1;
-  private static final int UPG_MAGIC = 2;
-  private static final int DRAW_AMOUNT = 1;
 
   public SideEye() {
     super(ID, INFO);
 
-    setMagic(MAGIC, UPG_MAGIC);
+    setMagic(MAGIC);
+    setCostUpgrade(0);
   }
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    addToBot(new ApplyPowerAction(monster, player, new PoisonPower(monster, player, magicNumber)));
-    addToBot(new DrawCardAction(player, DRAW_AMOUNT));
+    addToBot(
+        new AllEnemyApplyPowerAction(
+            monster,
+            magicNumber,
+            (individualMonster) -> (new PoisonPower(monster, player, magicNumber))));
+    addToBot(new DrawCardAction(player, magicNumber));
   }
 
   @Override
