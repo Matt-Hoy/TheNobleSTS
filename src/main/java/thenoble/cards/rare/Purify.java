@@ -15,7 +15,6 @@ public class Purify extends CachetCard {
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, 1);
   private static final int BLOCK = 5;
-  private static final int CACHET_TIMES = 1;
 
   public Purify() {
     super(ID, INFO);
@@ -43,7 +42,7 @@ public class Purify extends CachetCard {
     int cachetCount = cachetAmount();
     addToBot(new GainBlockAction(player, player, block));
     if (cachetCount > 0) {
-      triggerCachetEffect(player, monster, CACHET_TIMES);
+      triggerCachetEffect(player, monster, 1);
     }
   }
 

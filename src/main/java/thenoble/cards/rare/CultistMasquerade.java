@@ -21,7 +21,6 @@ public class CultistMasquerade extends CachetCard {
   private static final int UPG_DAMAGE = 5;
   private static final int MAGIC = 0;
   private static final int UPG_MAGIC = 1;
-  private static final int CACHET_TIMES = 1;
 
   public CultistMasquerade() {
     super(ID, INFO);
@@ -45,7 +44,7 @@ public class CultistMasquerade extends CachetCard {
             new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL),
             AbstractGameAction.AttackEffect.SLASH_HEAVY));
     if (cachetCount > 0) {
-      triggerCachetEffect(player, monster, CACHET_TIMES);
+      triggerCachetEffect(player, monster, 1);
     }
   }
 

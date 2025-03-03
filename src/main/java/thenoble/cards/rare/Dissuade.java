@@ -19,7 +19,6 @@ public class Dissuade extends CachetCard {
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY, 2);
   private static final int BLOCK = 18;
   private static final int MAGIC = 1;
-  private static final int CACHET_TIMES = 1;
 
   public Dissuade() {
     super(ID, INFO);
@@ -27,7 +26,6 @@ public class Dissuade extends CachetCard {
     setBlock(BLOCK);
     setMagic(MAGIC);
     setCostUpgrade(1);
-    setExhaust(true);
   }
 
   @Override
@@ -37,6 +35,7 @@ public class Dissuade extends CachetCard {
             player,
             -magicNumber,
             (individualMonster) -> (new StrengthPower(individualMonster, -magicNumber))));
+    exhaust = true;
   }
 
   @Override
@@ -44,7 +43,7 @@ public class Dissuade extends CachetCard {
     int cachetCount = cachetAmount();
     addToBot(new GainBlockAction(player, block));
     if (cachetCount > 0) {
-      triggerCachetEffect(player, AbstractDungeon.getMonsters().monsters, CACHET_TIMES);
+      triggerCachetEffect(player, AbstractDungeon.getMonsters().monsters, 1);
     }
   }
 

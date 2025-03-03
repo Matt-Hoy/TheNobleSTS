@@ -21,7 +21,6 @@ public class AntiquePistol extends CachetCard {
           MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, 1);
   private static final int MAGIC = 4;
   private static final int UPG_MAGIC = 7;
-  private static final int CACHET_TIMES = 1;
 
   private static class AntiquePistolAction extends AbstractGameAction {
     private final int incAmount;
@@ -55,6 +54,7 @@ public class AntiquePistol extends CachetCard {
   @Override
   public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new AntiquePistolAction(magicNumber, this));
+    exhaust = true;
   }
 
   public AntiquePistol() {
@@ -62,7 +62,6 @@ public class AntiquePistol extends CachetCard {
     misc = 14;
     setDamage(misc);
     setMagic(MAGIC, UPG_MAGIC);
-    setExhaust(true);
   }
 
   @Override
@@ -76,7 +75,7 @@ public class AntiquePistol extends CachetCard {
             new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL),
             AbstractGameAction.AttackEffect.NONE));
     if (cachetCount > 0) {
-      triggerCachetEffect(player, monster, CACHET_TIMES);
+      triggerCachetEffect(player, monster, 1);
     }
   }
 
