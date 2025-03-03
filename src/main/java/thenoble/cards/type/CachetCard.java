@@ -12,9 +12,9 @@ import java.util.Arrays;
 import java.util.Objects;
 import thenoble.cards.NobleCard;
 import thenoble.powers.ConfidencePower;
+import thenoble.relics.common.WoodenDeckBox;
 import thenoble.relics.rare.DanceCertificate;
 import thenoble.relics.rare.SelfieStick;
-import thenoble.relics.common.WoodenDeckBox;
 import thenoble.relics.type.CachetRelic;
 import thenoble.util.CardStats;
 
