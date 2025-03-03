@@ -262,6 +262,10 @@
     "NAME": "Undermine",
     "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Apply !M! ${modID}:Advantage."
   },
+  "${modID}:Unselfconscious": {
+    "NAME": "Unselfconscious",
+    "DESCRIPTION": "Gain !M! Dexterity. Gain !M! Strength. Shuffle a pair of Dazed into your draw pile."
+  },
   "${modID}:WeightRoom": {
     "NAME": "Weight Room",
     "DESCRIPTION": "Whenever you play a skill this turn, gain !M! temporary Strength."
