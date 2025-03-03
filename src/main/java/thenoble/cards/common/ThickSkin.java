@@ -21,6 +21,7 @@ public class ThickSkin extends NobleCard {
     super(ID, INFO);
 
     setMagic(MAGIC, UPG_MAGIC);
+    setExhaust(true);
   }
 
   @Override

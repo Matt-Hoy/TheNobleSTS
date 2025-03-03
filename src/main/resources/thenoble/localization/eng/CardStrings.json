@@ -129,7 +129,7 @@
   },
   "${modID}:Insulate": {
     "NAME": "Insulate",
-    "DESCRIPTION": "Gain 1 Block for every stack of every debuff on target enemy."
+    "DESCRIPTION": "Gain 2 Block for every stack of every debuff on target enemy."
   },
   "${modID}:InsultToInjury": {
     "NAME": "Insult To Injury",
@@ -163,7 +163,7 @@
   },
   "${modID}:Preempt": {
     "NAME": "Preempt",
-    "DESCRIPTION": "Gain !M! Plated Armor."
+    "DESCRIPTION": "Gain !M! Plated Armor. Exhaust."
   },
   "${modID}:Purify": {
     "NAME": "Purify",
@@ -183,7 +183,7 @@
   },
   "${modID}:Roughhouse": {
     "NAME": "Roughhouse",
-    "DESCRIPTION": "Deal !D! damage. Gain !M! Plated Armor."
+    "DESCRIPTION": "Deal !D! damage. Gain !M! Plated Armor. Exhaust."
   },
   "${modID}:Schadenfreude": {
     "NAME": "Schadenfreude",
@@ -228,7 +228,7 @@
   },
   "${modID}:ThickSkin": {
     "NAME": "Thick Skin",
-    "DESCRIPTION": "Gain !M! Metallicize."
+    "DESCRIPTION": "Gain !M! Metallicize. Exhaust."
   },
   "${modID}:TheDuster": {
     "NAME": "The Duster",

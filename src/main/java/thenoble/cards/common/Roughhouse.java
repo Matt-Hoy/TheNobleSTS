@@ -27,6 +27,7 @@ public class Roughhouse extends NobleCard {
 
     setDamage(DAMAGE, UPG_DAMAGE);
     setMagic(MAGIC, UPG_MAGIC);
+    setExhaust(true);
   }
 
   @Override

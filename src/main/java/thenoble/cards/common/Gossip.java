@@ -17,8 +17,8 @@ public class Gossip extends NobleCard {
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY, 0);
   private static final int BLOCK = 2;
   private static final int UPG_BLOCK = 1;
-  private static final int MAGIC = 3;
-  private static final int UPG_MAGIC = 2;
+  private static final int MAGIC = 1;
+  private static final int UPG_MAGIC = 1;
 
   public Gossip() {
     super(ID, INFO);

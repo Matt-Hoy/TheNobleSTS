@@ -15,12 +15,13 @@ public class Preempt extends NobleCard {
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF, 0);
   private static final int MAGIC = 1;
-  private static final int UPG_MAGIC = 1;
+  private static final int UPG_MAGIC = 2;
 
   public Preempt() {
     super(ID, INFO);
 
-    setMagic(MAGIC, UPG_MAGIC);
+    setMagic(MAGIC);
+    setExhaust(true);
   }
 
   @Override

@@ -13,7 +13,7 @@ public class AStepAhead extends NobleCard {
   public static final String ID = makeID("AStepAhead");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF, 1);
+          MyCharacter.Meta.CARD_COLOR, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF, 2);
   private static final int MAGIC = 1;
 
   public AStepAhead() {
