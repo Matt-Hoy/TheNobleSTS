@@ -55,7 +55,7 @@
   },
   "${modID}:DanceMoves": {
     "NAME": "Dance Moves",
-    "DESCRIPTION": "Draw !M! cards."
+    "DESCRIPTION": "Draw !M! card(s)."
   },
   "${modID}:DanceOnEm": {
     "NAME": "Dance On 'Em",
@@ -79,7 +79,7 @@
   },
   "${modID}:Entitlement": {
     "NAME": "Entitlement",
-    "DESCRIPTION": "At the start of your turn, draw !M! card."
+    "DESCRIPTION": "At the start of your turn, draw !M! card(s)."
   },
   "${modID}:EyeForQuality": {
     "NAME": "Eye For Quality",

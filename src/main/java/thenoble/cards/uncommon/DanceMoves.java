@@ -13,7 +13,7 @@ public class DanceMoves extends NobleCard {
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, 1);
-  private static final int MAGIC = 2;
+  private static final int MAGIC = 1;
 
   public DanceMoves() {
     super(ID, INFO);

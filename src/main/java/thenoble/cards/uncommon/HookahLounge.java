@@ -18,8 +18,8 @@ public class HookahLounge extends NobleCard {
           CardRarity.UNCOMMON,
           CardTarget.ALL_ENEMY,
           0);
-  private static final int MAGIC = 1;
-  private static final int UPG_MAGIC = 1;
+  private static final int MAGIC = 3;
+  private static final int UPG_MAGIC = 2;
 
   public HookahLounge() {
     super(ID, INFO);
