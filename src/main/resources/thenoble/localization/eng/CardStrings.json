@@ -114,10 +114,6 @@
     "NAME": "Hookah Lounge",
     "DESCRIPTION": "Apply !M! Poison to ALL enemies."
   },
-  "${modID}:SpectralHounds": {
-    "NAME": "Spectral Hounds",
-    "DESCRIPTION": "Return !M! card(s) not named Spectral Hounds from your Exhaust pile. Exhaust."
-  },
   "${modID}:ImpeccableStyle": {
     "NAME": "Impeccable Style",
     "DESCRIPTION": "Apply !M! ${modID}:Advantage. Exhaust."
@@ -214,13 +210,21 @@
     "NAME": "Silly Affect",
     "DESCRIPTION": "Whenever you deal unblocked attack damage, apply !M! Weak."
   },
+  "${modID}:Slap": {
+    "NAME": "Slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
   "${modID}:SocialClimber": {
     "NAME": "Social Climber",
     "DESCRIPTION": "Whenever you play a skill that costs 0, draw !M! card(s)."
   },
-  "${modID}:Slap": {
-    "NAME": "Slap",
-    "DESCRIPTION": "Deal !D! damage."
+  "${modID}:SpectralFog": {
+    "NAME": "Spectral Fog",
+    "DESCRIPTION": "Whenever a card is exhausted, ALL enemies lose !M! HP."
+  },
+  "${modID}:SpectralHounds": {
+    "NAME": "Spectral Hounds",
+    "DESCRIPTION": "Return !M! card(s) not named Spectral Hounds from your Exhaust pile. Exhaust."
   },
   "${modID}:SpinTheNarrative": {
     "NAME": "Spin the Narrative",

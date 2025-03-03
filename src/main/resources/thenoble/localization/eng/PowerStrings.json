@@ -126,6 +126,13 @@
       " card(s)."
     ]
   },
+  "${modID}:SpectralFog": {
+    "NAME": "Spectral Fog",
+    "DESCRIPTIONS": [
+      "Whenever a card is exhausted, ALL enemies lose #b",
+      " HP."
+    ]
+  },
   "${modID}:StepAhead": {
     "NAME": "Step Ahead",
     "DESCRIPTIONS": [

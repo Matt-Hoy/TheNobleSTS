@@ -27,12 +27,12 @@ public class CultistMasquerade extends CachetCard {
 
     setDamage(DAMAGE, UPG_DAMAGE);
     setMagic(MAGIC, UPG_MAGIC);
-    setExhaust(true);
   }
 
   @Override
   public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new ApplyPowerAction(player, player, new RitualPower(player, magicNumber, true)));
+    exhaust = true;
   }
 
   @Override
