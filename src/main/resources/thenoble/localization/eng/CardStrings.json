@@ -114,6 +114,10 @@
     "NAME": "Hookah Lounge",
     "DESCRIPTION": "Apply !M! Poison to ALL enemies."
   },
+  "${modID}:SpectralHounds": {
+    "NAME": "Spectral Hounds",
+    "DESCRIPTION": "Return !M! card(s) not named Spectral Hounds from your Exhaust pile. Exhaust."
+  },
   "${modID}:ImpeccableStyle": {
     "NAME": "Impeccable Style",
     "DESCRIPTION": "Apply !M! ${modID}:Advantage. Exhaust."

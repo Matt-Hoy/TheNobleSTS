@@ -1,4 +1,4 @@
-package thenoble.cards.common;
+package thenoble.cards.uncommon;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.AllEnemyApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -14,7 +14,11 @@ public class Gossip extends NobleCard {
   public static final String ID = makeID("Gossip");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY, 0);
+          MyCharacter.Meta.CARD_COLOR,
+          CardType.SKILL,
+          CardRarity.UNCOMMON,
+          CardTarget.ALL_ENEMY,
+          0);
   private static final int BLOCK = 2;
   private static final int UPG_BLOCK = 1;
   private static final int MAGIC = 1;
