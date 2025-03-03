@@ -230,6 +230,10 @@
     "NAME": "Spin the Narrative",
     "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Deal !D! damage for each card in your hand."
   },
+  "${modID}:Stockpile": {
+    "NAME": "Stockpile",
+    "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: At the end of combat, heal !M! HP. Exhaust."
+  },
   "${modID}:TargetedCriticism": {
     "NAME": "Targeted Criticism",
     "DESCRIPTION": "${modID}:Cachet: Deal !D! damage for every stack of debuff on ALL enemies."
