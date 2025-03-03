@@ -24,6 +24,7 @@ public class BuyThemADrink extends NobleCard {
 
     setMagic(MAGIC, UPG_MAGIC);
     setCostUpgrade(0);
+    setExhaust(true);
   }
 
   @Override

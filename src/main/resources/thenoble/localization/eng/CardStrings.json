@@ -108,7 +108,7 @@
   },
   "${modID}:Hamstring": {
     "NAME": "Hamstring",
-    "DESCRIPTION": "Deal !D! damage. Apply Slow."
+    "DESCRIPTION": "Deal !D! damage. Apply Slow. Exhaust."
   },
   "${modID}:HookahLounge": {
     "NAME": "Hookah Lounge",

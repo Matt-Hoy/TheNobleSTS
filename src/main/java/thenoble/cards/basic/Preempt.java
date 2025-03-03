@@ -20,7 +20,7 @@ public class Preempt extends NobleCard {
   public Preempt() {
     super(ID, INFO);
 
-    setMagic(MAGIC);
+    setMagic(MAGIC, UPG_MAGIC);
     setExhaust(true);
   }
 

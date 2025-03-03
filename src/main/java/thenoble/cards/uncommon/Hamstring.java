@@ -25,6 +25,7 @@ public class Hamstring extends NobleCard {
 
     setDamage(DAMAGE, UPG_DAMAGE);
     setCostUpgrade(2);
+    setExhaust(true);
   }
 
   @Override
