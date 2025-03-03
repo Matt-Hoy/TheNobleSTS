@@ -26,7 +26,7 @@
     "NAME": "Clay Battery",
     "FLAVOR": "Capable of powering a Game Boy Advanced.",
     "DESCRIPTIONS": [
-      "Every time you play 10 #yPowers, gain [E]."
+      "Gain [E] every time you play 10 #yPowers."
     ]
   },
   "${modID}:DanceCertificate": {
@@ -45,6 +45,13 @@
       " #yConfidence."
     ]
   },
+  "${modID}:SatinCape": {
+    "NAME": "Satin Cape",
+    "FLAVOR": "I knew red was my color.",
+    "DESCRIPTIONS": [
+      "Gain [E] whenever you play a power that costs 2 or more."
+    ]
+  },
   "${modID}:SelfieStick": {
     "NAME": "Selfie Stick",
     "FLAVOR": "Look good from every angle.",
@@ -57,7 +64,7 @@
     "NAME": "Silver Flute",
     "FLAVOR": "One of these days you'll learn to play it.",
     "DESCRIPTIONS": [
-      "Every time you play 10 #ySkills, gain [E]."
+      "Gain [E] every time you play 10 #ySkills."
     ]
   },
   "${modID}:WoodenDeckBox": {
