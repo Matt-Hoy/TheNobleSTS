@@ -67,7 +67,7 @@ public class AntiquePistol extends CachetCard {
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
     int cachetCount = cachetAmount();
-    this.addToBot(
+    addToBot(
         new VFXAction(new MindblastEffect(player.dialogX, player.dialogY, player.flipHorizontal)));
     addToBot(
         new DamageAction(

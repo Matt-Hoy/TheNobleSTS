@@ -53,6 +53,6 @@ public class DemoralizePower extends BasePower {
   }
 
   public void updateDescription() {
-    this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+    description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
   }
 }
