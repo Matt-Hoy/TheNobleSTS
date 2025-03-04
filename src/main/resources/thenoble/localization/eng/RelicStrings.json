@@ -45,6 +45,13 @@
       " #yConfidence."
     ]
   },
+  "${modID}:FisheyeMirror": {
+    "NAME": "Fisheye Mirror",
+    "FLAVOR": "My nose isn't really that big... Is it?",
+    "DESCRIPTIONS": [
+      "Gain [E] and shuffle a #yDazed into your draw pile at the start of each turn."
+    ]
+  },
   "${modID}:SatinCape": {
     "NAME": "Satin Cape",
     "FLAVOR": "I knew red was my color.",
