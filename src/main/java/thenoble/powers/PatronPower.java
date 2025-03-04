@@ -23,7 +23,7 @@ public class PatronPower extends BasePower {
       for (int i = 0; i < amount; i++) {
         AbstractCard newCard =
             AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER).makeCopy();
-        this.addToBot(new MakeTempCardInHandAction(newCard));
+        addToBot(new MakeTempCardInHandAction(newCard));
       }
     }
   }

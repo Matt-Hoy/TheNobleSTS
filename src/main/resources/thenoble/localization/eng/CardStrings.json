@@ -218,6 +218,10 @@
     "NAME": "Slap",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "${modID}:SocialChameleon": {
+    "NAME": "Social Chameleon",
+    "DESCRIPTION": "Add !M! random power card(s) into your hand. Exhaust. Cachet: They cost 0 this turn."
+  },
   "${modID}:SocialClimber": {
     "NAME": "Social Climber",
     "DESCRIPTION": "Whenever you play a skill that costs 0, draw !M! card(s)."
