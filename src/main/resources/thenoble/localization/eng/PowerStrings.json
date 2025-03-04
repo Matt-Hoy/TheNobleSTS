@@ -52,7 +52,7 @@
   "${modID}:Entitlement": {
     "NAME": "Entitlement",
     "DESCRIPTIONS": [
-      "At the start of your turn, draw #b",
+      "At the start of each turn, draw #b",
       " card(s)"
     ]
   },
@@ -75,6 +75,14 @@
     "DESCRIPTIONS": [
       "Whenever a card is exhausted, gain #b",
       " #yBlock."
+    ]
+  },
+  "${modID}:Narcissism": {
+    "NAME": "Narcissism",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b",
+      " #yDexterty and #b",
+      " #yStrength."
     ]
   },
   "${modID}:Patron": {

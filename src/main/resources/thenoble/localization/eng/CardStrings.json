@@ -83,7 +83,7 @@
   },
   "${modID}:Entitlement": {
     "NAME": "Entitlement",
-    "DESCRIPTION": "At the start of your turn, draw !M! card(s)."
+    "DESCRIPTION": "At the start of each turn, draw !M! card(s)."
   },
   "${modID}:EyeForQuality": {
     "NAME": "Eye For Quality",
@@ -142,6 +142,11 @@
   "${modID}:MakingDonations": {
     "NAME": "Making Donations",
     "DESCRIPTION": "Whenever a card is exhausted, gain !M! block."
+  },
+  "${modID}:Narcissism": {
+    "NAME": "Narcissism",
+    "DESCRIPTION": "At the start of each turn, gain !M! Dexterity and !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. At the start of each turn, gain !M! Dexterity and !M! Strength."
   },
   "${modID}:OpenBar": {
     "NAME": "Open Bar",
