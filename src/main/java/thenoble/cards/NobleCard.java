@@ -7,10 +7,12 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -739,6 +741,35 @@ public abstract class NobleCard extends CustomCard {
       }
     }
     return total;
+  }
+
+  protected static class IncreaseDamageAction extends AbstractGameAction {
+    private final int incAmount;
+    private final AbstractCard activeCard;
+
+    public IncreaseDamageAction(int incAmount, AbstractCard activeCard) {
+      this.incAmount = incAmount;
+      this.activeCard = activeCard;
+    }
+
+    @Override
+    public void update() {
+      for (AbstractCard card : AbstractDungeon.player.masterDeck.group) {
+        if (card.uuid == activeCard.uuid) {
+          card.misc += incAmount;
+          card.applyPowers();
+          card.baseDamage = card.misc;
+          card.isDamageModified = false;
+        }
+      }
+      for (AbstractCard card : GetAllInBattleInstances.get(activeCard.uuid)) {
+        card.misc += incAmount;
+        card.applyPowers();
+        card.baseDamage = card.misc;
+      }
+      // Never delete this. For some reason this prevents infinite update.
+      tickDuration();
+    }
   }
 
   protected static class LocalVarInfo {

@@ -65,6 +65,10 @@
     "NAME": "Dance On 'Em",
     "DESCRIPTION": "Gain !B! Block. ALL enemies lose !M! Strength and gain !M! Weak. Exhaust."
   },
+  "${modID}:DelayGratification": {
+    "NAME": "Delay Gratification",
+    "DESCRIPTION": "Ethereal. Permanently increase this card's damage by !M! when drawn. Deal !D! damage. Exhaust."
+  },
   "${modID}:Diatribe": {
     "NAME": "Diatribe",
     "DESCRIPTION": "Apply !M! Vulnerable and !M! Weak to ALL enemies."

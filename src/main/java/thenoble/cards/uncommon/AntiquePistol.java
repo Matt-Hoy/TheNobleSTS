@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import thenoble.cards.type.CachetCard;
@@ -20,46 +18,17 @@ public class AntiquePistol extends CachetCard {
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, 1);
   private static final int MAGIC = 4;
-  private static final int UPG_MAGIC = 7;
-
-  private static class AntiquePistolAction extends AbstractGameAction {
-    private final int incAmount;
-    private final AbstractCard activeCard;
-
-    public AntiquePistolAction(int incAmount, AbstractCard activeCard) {
-      this.incAmount = incAmount;
-      this.activeCard = activeCard;
-    }
-
-    @Override
-    public void update() {
-      for (AbstractCard card : AbstractDungeon.player.masterDeck.group) {
-        if (card.uuid == activeCard.uuid) {
-          card.misc += incAmount;
-          card.applyPowers();
-          card.baseDamage = card.misc;
-          card.isDamageModified = false;
-        }
-      }
-      for (AbstractCard card : GetAllInBattleInstances.get(activeCard.uuid)) {
-        card.misc += incAmount;
-        card.applyPowers();
-        card.baseDamage = card.misc;
-      }
-      // Never delete this. For some reason this prevents infinite update.
-      tickDuration();
-    }
-  }
+  private static final int UPG_MAGIC = 6;
 
   @Override
   public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {
-    addToBot(new AntiquePistolAction(magicNumber, this));
+    addToBot(new IncreaseDamageAction(magicNumber, this));
     exhaust = true;
   }
 
   public AntiquePistol() {
     super(ID, INFO);
-    misc = 14;
+    misc = 8;
     setDamage(misc);
     setMagic(MAGIC, UPG_MAGIC);
   }
