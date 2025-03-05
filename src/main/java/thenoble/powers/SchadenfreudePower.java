@@ -15,10 +15,12 @@ public class SchadenfreudePower extends BasePower {
     super(POWER_ID, TYPE, TURN_BASED, owner, amount);
   }
 
-  // TODO: Counts this for each player in multiplayer
   @Override
   public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-    if (power.type == PowerType.DEBUFF && target != owner && source == owner) {
+    if (power.type == PowerType.DEBUFF
+        && target != owner
+        && source == owner
+        && !target.hasPower("Artifact")) {
       flash();
       addToBot(new GainBlockAction(owner, owner, amount));
     }

@@ -1,4 +1,4 @@
-package thenoble.cards.rare;
+package thenoble.cards.uncommon;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +13,7 @@ public class EyeForQuality extends NobleCard {
   public static final String ID = makeID("EyeForQuality");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, 0);
+          MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF, 0);
   private static final int MAGIC = 1;
 
   public EyeForQuality() {
