@@ -51,10 +51,9 @@ public class RiskyBiscuit extends CachetCard {
     modifyCostForCombat(-1);
   }
 
+  //  TODO: Not registering, cost stays the lowest its been
   @Override
   public void onConfidenceRemoved() {
     cost = baseCost;
-    setCostForTurn(cost);
-    isCostModified = false;
   }
 }

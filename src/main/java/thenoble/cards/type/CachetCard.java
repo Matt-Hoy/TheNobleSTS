@@ -60,6 +60,7 @@ public abstract class CachetCard extends NobleCard {
     }
 
     addToBot(new RemoveSpecificPowerAction(player, player, ConfidencePower.POWER_ID));
+    onConfidenceRemoved();
 
     if (AbstractDungeon.player.hasRelic(WoodenDeckBox.ID)) {
       addToBot(new DrawCardAction(AbstractDungeon.player, 1));
