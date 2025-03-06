@@ -264,6 +264,10 @@
     "NAME": "Stockpile",
     "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: At the end of combat, heal !M! HP. Exhaust."
   },
+  "${modID}:TalkOver": {
+    "NAME": "Talk Over",
+    "DESCRIPTION": "Gain !B! Block. Whenever you play a card this turn, ALL enemies lose !M! HP."
+  },
   "${modID}:TargetedCriticism": {
     "NAME": "Targeted Criticism",
     "DESCRIPTION": "${modID}:Cachet: Deal !D! damage for every stack of debuff on ALL enemies."
