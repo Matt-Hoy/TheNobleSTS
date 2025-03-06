@@ -85,6 +85,10 @@
     "NAME": "Dissuade",
     "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: ALL enemies lose !M! Strength. Exhaust."
   },
+  "${modID}:Distract": {
+    "NAME": "Distract",
+    "DESCRIPTION": "Gain !B! Block. If this card is exhausted, gain 2 Dexterity."
+  },
   "${modID}:DuelistsStrike": {
     "NAME": "Duelist's Strike",
     "DESCRIPTION": "Deal !D! damage. Gain !M! Dexterity. Exhaust."
@@ -171,8 +175,8 @@
   },
   "${modID}:PowerNap": {
     "NAME": "Power Nap",
-    "DESCRIPTION": "Exhaust !M! attack(s) in your hand. Gain !M! [E] and draw !M! card(s).",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! attacks in your hand. Gain !M! [E] and draw !M! cards."
+    "DESCRIPTION": "Exhaust !M! card(s) in your hand. Gain !M! [E] and draw !M! card(s).",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your hand. Gain !M! [E] and draw !M! cards."
   },
   "${modID}:PracticedAffect": {
     "NAME": "Practiced Affect",
