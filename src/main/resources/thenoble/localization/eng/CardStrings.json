@@ -211,6 +211,10 @@
     "NAME": "Roughhouse",
     "DESCRIPTION": "Deal !D! damage. Gain !M! Plated Armor. Exhaust."
   },
+  "${modID}:Savings": {
+    "NAME": "Savings",
+    "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: Next turnd raw !M! additional card(s)."
+  },
   "${modID}:Schadenfreude": {
     "NAME": "Schadenfreude",
     "DESCRIPTION": "Whenever an enemy receives a debuff, gain !M! block."
