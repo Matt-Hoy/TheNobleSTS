@@ -38,7 +38,7 @@
   },
   "${modID}:BuyThemADrink": {
     "NAME": "Buy Them A Drink",
-    "DESCRIPTION": "Apply !M! Poison for each stack of Weak and Vulnerable."
+    "DESCRIPTION": "Apply !M! Poison for each stack of Weak and Vulnerable. Exhaust."
   },
   "${modID}:CharismaForm": {
     "NAME": "Charisma Form",

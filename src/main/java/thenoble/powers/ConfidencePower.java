@@ -63,6 +63,15 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
         ((CachetCard) card).onConfidenceRemoved();
       }
     }
+    for (AbstractCard card : AbstractDungeon.player.exhaustPile.group) {
+      if (usesMagic(card) && card.isMagicNumberModified) {
+        card.magicNumber -= stacks;
+        card.isMagicNumberModified = false;
+      }
+      if (card instanceof CachetCard) {
+        ((CachetCard) card).onConfidenceRemoved();
+      }
+    }
   }
 
   @Override
@@ -72,6 +81,12 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
 
   private static void modMagicNumbers() {
     for (AbstractCard card : AbstractDungeon.player.hand.group) {
+      if (usesMagic(card)) {
+        card.magicNumber++;
+        card.isMagicNumberModified = true;
+      }
+    }
+    for (AbstractCard card : AbstractDungeon.player.exhaustPile.group) {
       if (usesMagic(card)) {
         card.magicNumber++;
         card.isMagicNumberModified = true;

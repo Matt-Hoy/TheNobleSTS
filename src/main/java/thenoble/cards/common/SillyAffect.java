@@ -9,6 +9,8 @@ import thenoble.character.MyCharacter;
 import thenoble.powers.SillyAffectPower;
 import thenoble.util.CardStats;
 
+import static thenoble.cards.type.CachetCard.cachetAmount;
+
 public class SillyAffect extends NobleCard {
   public static final String ID = makeID("SillyAffect");
   private static final CardStats INFO =
@@ -25,7 +27,9 @@ public class SillyAffect extends NobleCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    addToBot(new ApplyPowerAction(player, player, new SillyAffectPower(player, magicNumber)));
+    if (cachetAmount() > 0 || magicNumber > 0) {
+      addToBot(new ApplyPowerAction(player, player, new SillyAffectPower(player, magicNumber)));
+    }
   }
 
   @Override

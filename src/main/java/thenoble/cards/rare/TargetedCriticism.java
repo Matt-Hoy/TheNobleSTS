@@ -36,6 +36,7 @@ public class TargetedCriticism extends CachetCard {
             monster,
             new DamageInfo(player, (damage * stacks), DamageInfo.DamageType.NORMAL),
             AbstractGameAction.AttackEffect.FIRE));
+    exhaust = true;
   }
 
   @Override
