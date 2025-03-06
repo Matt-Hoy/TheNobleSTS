@@ -165,6 +165,11 @@
     "DESCRIPTION": "Whenever you draw a card, deal !M! damage to ALL enemies.",
     "UPGRADE_DESCRIPTION": "Innate. Whenever you draw a card, deal !M! damage to ALL enemies."
   },
+  "${modID}:PowerNap": {
+    "NAME": "Power Nap",
+    "DESCRIPTION": "Exhaust !M! skill(s) in your hand. Gain !M! [E] and draw !M! card(s).",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! skills in your hand. Gain !M! [E] and draw !M! cards."
+  },
   "${modID}:PracticedAffect": {
     "NAME": "Practiced Affect",
     "DESCRIPTION": "Whenever you play a skill, gain !M! block.",
