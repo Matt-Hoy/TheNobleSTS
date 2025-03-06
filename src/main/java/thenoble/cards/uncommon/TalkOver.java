@@ -1,5 +1,7 @@
 package thenoble.cards.uncommon;
 
+import static thenoble.cards.type.CachetCard.cachetAmount;
+
 import com.evacipated.cardcrawl.mod.stslib.actions.common.AllEnemyApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,8 +11,6 @@ import com.megacrit.cardcrawl.powers.ChokePower;
 import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
-
-import static thenoble.cards.type.CachetCard.cachetAmount;
 
 public class TalkOver extends NobleCard {
   public static final String ID = makeID("TalkOver");

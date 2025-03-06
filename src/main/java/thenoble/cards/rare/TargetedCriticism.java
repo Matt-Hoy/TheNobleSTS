@@ -31,11 +31,14 @@ public class TargetedCriticism extends CachetCard {
     for (AbstractMonster individualMonster : AbstractDungeon.getMonsters().monsters) {
       stacks += countAllPowers(individualMonster);
     }
-    addToBot(
-        new DamageAction(
-            monster,
-            new DamageInfo(player, (damage * stacks), DamageInfo.DamageType.NORMAL),
-            AbstractGameAction.AttackEffect.FIRE));
+    for (int i = 0; i < stacks; i++) {
+      addToBot(
+          new DamageAction(
+              monster,
+              new DamageInfo(player, (damage), DamageInfo.DamageType.NORMAL),
+              AbstractGameAction.AttackEffect.FIRE,
+              true));
+    }
     exhaust = true;
   }
 

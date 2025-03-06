@@ -13,14 +13,13 @@ public class SharpenYourTeeth extends NobleCard {
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, 1);
-  private static final int MAGIC = 1;
+  private static final int MAGIC = 2;
   private static final int UPG_MAGIC = 1;
 
   public SharpenYourTeeth() {
     super(ID, INFO);
 
     setMagic(MAGIC, UPG_MAGIC);
-    setExhaust(true);
   }
 
   @Override

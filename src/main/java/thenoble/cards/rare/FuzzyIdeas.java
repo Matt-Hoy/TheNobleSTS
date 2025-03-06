@@ -1,7 +1,5 @@
 package thenoble.cards.rare;
 
-import static thenoble.cards.type.CachetCard.cachetAmount;
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,9 +15,9 @@ public class FuzzyIdeas extends NobleCard {
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, 2);
-  private static final int BLOCK = 16;
-  private static final int UPG_BLOCK = 8;
-  private static final int MAGIC = 0;
+  private static final int BLOCK = 18;
+  private static final int UPG_BLOCK = 5;
+  private static final int MAGIC = 1;
   private static final int UPG_MAGIC = 1;
 
   public FuzzyIdeas() {
@@ -32,10 +30,7 @@ public class FuzzyIdeas extends NobleCard {
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new GainBlockAction(player, player, block));
-    int confStacks = cachetAmount();
-    if (magicNumber > 0 || confStacks > 0) {
-      addToBot(new ApplyPowerAction(player, player, new BlurPower(player, magicNumber)));
-    }
+    addToBot(new ApplyPowerAction(player, player, new BlurPower(player, magicNumber)));
   }
 
   @Override

@@ -28,7 +28,9 @@ public class ThrowTheGlove extends CachetCard {
   @Override
   public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new ExpertiseAction(player, 10));
-    exhaust = true;
+    if (!upgraded) {
+      exhaust = true;
+    }
   }
 
   @Override

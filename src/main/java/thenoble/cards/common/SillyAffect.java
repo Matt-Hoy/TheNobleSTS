@@ -1,5 +1,7 @@
 package thenoble.cards.common;
 
+import static thenoble.cards.type.CachetCard.cachetAmount;
+
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,8 +10,6 @@ import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
 import thenoble.powers.SillyAffectPower;
 import thenoble.util.CardStats;
-
-import static thenoble.cards.type.CachetCard.cachetAmount;
 
 public class SillyAffect extends NobleCard {
   public static final String ID = makeID("SillyAffect");

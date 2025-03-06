@@ -193,7 +193,8 @@
   },
   "${modID}:Purify": {
     "NAME": "Purify",
-    "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: Exhaust every Status and Curse card in your hand and discard pile."
+    "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: Exhaust every Status and Curse card in your hand and discard pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: Exhaust every Status and Curse card in your hand, discard pile, and draw pile."
   },
   "${modID}:Question": {
     "NAME": "Question",
@@ -295,7 +296,8 @@
   },
   "${modID}:ThrowTheGlove": {
     "NAME": "Throw The Glove",
-    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards until your hand is full. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards until your hand is full. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards until your hand is full."
   },
   "${modID}:Undermine": {
     "NAME": "Undermine",
