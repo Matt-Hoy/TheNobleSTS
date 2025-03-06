@@ -39,8 +39,8 @@ public class PowerNap extends NobleCard {
     addToBot(
         new SelectCardsInHandAction(
             magicNumber,
-            "Select Skill(s) to Exhaust.",
-            (AbstractCard card) -> card.type == CardType.SKILL,
+            "Select attack(s) to Exhaust.",
+            (AbstractCard card) -> card.type == CardType.ATTACK,
             this::exhaustCard));
     addToBot(new GainEnergyAction(magicNumber));
     addToBot(new DrawCardAction(magicNumber));
