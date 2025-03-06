@@ -252,6 +252,11 @@
     "NAME": "Social Climber",
     "DESCRIPTION": "Whenever you play a skill that costs 0, draw !M! card(s)."
   },
+  "${modID}:SpectralDisposition": {
+    "NAME": "Spectral Disposition",
+    "DESCRIPTION": "At the start of each turn, return !M! random card(s) from your exhaust pile to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, return !M! random cards from your exhaust pile to your hand."
+  },
   "${modID}:SpectralFog": {
     "NAME": "Spectral Fog",
     "DESCRIPTION": "Whenever a card is exhausted, ALL enemies lose !M! HP."

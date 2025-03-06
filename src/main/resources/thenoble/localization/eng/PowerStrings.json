@@ -134,6 +134,13 @@
       " card(s)."
     ]
   },
+  "${modID}:SpectralDisposition": {
+    "NAME": "Spectral Disposition",
+    "DESCRIPTIONS": [
+      "At the start of each turn, return #b",
+      " random card(s) from your exhaust pile to your hand."
+    ]
+  },
   "${modID}:SpectralFog": {
     "NAME": "Spectral Fog",
     "DESCRIPTIONS": [
