@@ -255,8 +255,8 @@
   },
   "${modID}:SpectralDisposition": {
     "NAME": "Spectral Disposition",
-    "DESCRIPTION": "At the start of each turn, return !M! random card(s) from your exhaust pile to your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, return !M! random cards from your exhaust pile to your hand."
+    "DESCRIPTION": "At the start of each turn, return !M! random playable card(s) from your exhaust pile to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, return !M! random playable cards from your exhaust pile to your hand."
   },
   "${modID}:SpectralFog": {
     "NAME": "Spectral Fog",
