@@ -16,7 +16,9 @@ public class SpectralDispositionPower extends BasePower {
 
   @Override
   public void atStartOfTurn() {
-    addToBot(new RandomCardFromExhaustPileToHandAction());
+    for (int i = 0; i < amount; i++) {
+      addToBot(new RandomCardFromExhaustPileToHandAction());
+    }
   }
 
   public void updateDescription() {

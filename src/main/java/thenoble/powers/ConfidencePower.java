@@ -86,15 +86,9 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
         card.isMagicNumberModified = true;
       }
     }
-    for (AbstractCard card : AbstractDungeon.player.exhaustPile.group) {
-      if (usesMagic(card)) {
-        card.magicNumber++;
-        card.isMagicNumberModified = true;
-      }
-    }
   }
 
-  private static boolean usesMagic(AbstractCard card) {
+  public static boolean usesMagic(AbstractCard card) {
     return (card.baseMagicNumber >= 0
         || StringUtils.containsIgnoreCase(card.rawDescription, "!M!"));
   }

@@ -7,6 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
+import static thenoble.cards.type.CachetCard.cachetAmount;
+import static thenoble.powers.ConfidencePower.usesMagic;
+
 public class RandomCardFromExhaustPileToHandAction extends AbstractGameAction {
   private final AbstractPlayer player;
 
@@ -24,7 +27,14 @@ public class RandomCardFromExhaustPileToHandAction extends AbstractGameAction {
       candidates.addAll(player.exhaustPile.getPowers().group);
       int rand = AbstractDungeon.cardRandomRng.random(0, candidates.size() - 1);
       AbstractCard card = candidates.get(rand);
-      player.hand.addToHand(card.makeCopy());
+      AbstractCard newCard = card.makeCopy();
+      player.hand.addToHand(newCard);
+      if (cachetAmount() > 0) {
+        if (usesMagic(card) && !newCard.isMagicNumberModified) {
+          newCard.magicNumber += cachetAmount();
+          newCard.isMagicNumberModified = true;
+        }
+      }
       player.exhaustPile.removeCard(card);
       player.hand.refreshHandLayout();
     }

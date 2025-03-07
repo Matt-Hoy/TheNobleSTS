@@ -21,7 +21,6 @@ public class SpectralDisposition extends NobleCard {
     super(ID, INFO);
 
     setMagic(MAGIC, UPG_MAGIC);
-    setCostUpgrade(0);
   }
 
   @Override
