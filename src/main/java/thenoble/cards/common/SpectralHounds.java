@@ -4,10 +4,14 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.List;
 import java.util.Objects;
 import thenoble.cards.NobleCard;
 import thenoble.character.MyCharacter;
 import thenoble.util.CardStats;
+
+import static thenoble.powers.ConfidencePower.modSpecificCard;
 
 public class SpectralHounds extends NobleCard {
   public static final String ID = makeID("SpectralHounds");
@@ -30,7 +34,14 @@ public class SpectralHounds extends NobleCard {
         new FetchAction(
             player.exhaustPile,
             (card) -> (!Objects.equals(card.cardID, SpectralHounds.ID)),
-            magicNumber));
+            magicNumber,
+            this::modCards));
+  }
+
+  private void modCards(List<AbstractCard> cards) {
+    for (AbstractCard card : cards) {
+      modSpecificCard(card);
+    }
   }
 
   @Override

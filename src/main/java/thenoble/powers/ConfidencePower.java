@@ -86,6 +86,12 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
         card.isMagicNumberModified = true;
       }
     }
+    for (AbstractCard card : AbstractDungeon.player.exhaustPile.group) {
+      if (usesMagic(card)) {
+        card.magicNumber++;
+        card.isMagicNumberModified = true;
+      }
+    }
   }
 
   public static boolean usesMagic(AbstractCard card) {
@@ -95,15 +101,16 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
 
   @Override
   public void onCardDraw(AbstractCard card) {
-    if (usesMagic(card) && !card.isMagicNumberModified) {
-      card.magicNumber += cachetAmount();
-      card.isMagicNumberModified = true;
-    }
+    modSpecificCard(card);
   }
 
   @Override
   public void onCreateCard(AbstractCard card) {
-    if (usesMagic(card)) {
+    modSpecificCard(card);
+  }
+
+  public static void modSpecificCard(AbstractCard card) {
+    if (usesMagic(card) && !card.isMagicNumberModified) {
       card.magicNumber += cachetAmount();
       card.isMagicNumberModified = true;
     }
