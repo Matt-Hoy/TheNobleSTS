@@ -6,10 +6,11 @@ import static thenoble.TheNoble.makeID;
 import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
+import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -139,7 +140,11 @@ public class MyCharacter extends CustomPlayer {
         Meta.THE_NOBLE,
         new CustomEnergyOrb(
             orbTextures, characterPath("energyorb/vfx.png"), layerSpeeds), // Energy Orb
-        new SpriterAnimation(characterPath("animation/default.scml"))); // Animation
+        new SpineAnimation(
+            characterPath("animation/idle/nobleBobb.atlas"),
+            characterPath("animation/idle/nobleBobb.json"),
+            1f));
+    //        new SpriterAnimation(characterPath("animation/default.scml"))); // Animation
 
     initializeClass(
         null,
@@ -157,6 +162,8 @@ public class MyCharacter extends CustomPlayer {
     // values are fine.
     dialogX = (drawX + 0.0F * Settings.scale);
     dialogY = (drawY + 220.0F * Settings.scale);
+
+    AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
   }
 
   @Override
