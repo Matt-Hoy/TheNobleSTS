@@ -6,7 +6,7 @@
   },
   "${modID}:AgreeToDisagree": {
     "NAME": "Agree To Disagree",
-    "DESCRIPTION": "Remove all Vulnerable stacks from target enemy. Gain that much Dexterity."
+    "DESCRIPTION": "Remove all Vulnerable stacks from target enemy. Gain that much Dexterity. Exhaust."
   },
   "${modID}:AntiquePistol": {
     "NAME": "Antique Pistol",
@@ -175,8 +175,8 @@
   },
   "${modID}:PowerNap": {
     "NAME": "Power Nap",
-    "DESCRIPTION": "Exhaust !M! card(s) in your hand. Gain !M! [E] and draw !M! card(s).",
-    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your hand. Gain !M! [E] and draw !M! cards."
+    "DESCRIPTION": "Exhaust !M! card(s) in your hand. Gain !M! [E] and draw !M! card(s). Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards in your hand. Gain !M! [E] and draw !M! cards. Exhaust."
   },
   "${modID}:PracticedAffect": {
     "NAME": "Practiced Affect",

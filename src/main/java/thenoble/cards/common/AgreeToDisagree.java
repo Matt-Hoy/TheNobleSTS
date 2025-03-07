@@ -25,6 +25,7 @@ public class AgreeToDisagree extends NobleCard {
 
     setMagic(MAGIC, UPG_MAGIC);
     setCostUpgrade(1);
+    setExhaust(true);
   }
 
   @Override
