@@ -25,6 +25,7 @@ public class PowerNap extends NobleCard {
     super(ID, INFO);
 
     setMagic(MAGIC, UPG_MAGIC);
+    setExhaust(true);
   }
 
   private void exhaustCard(List<AbstractCard> cards) {
