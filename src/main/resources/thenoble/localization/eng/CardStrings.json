@@ -36,8 +36,8 @@
     "NAME": "Confidence Test",
     "DESCRIPTION": "Gain 1 ${modID}:Confidence."
   },
-  "${modID}:BuyThemADrink": {
-    "NAME": "Buy Them A Drink",
+  "${modID}:Untrustworthy": {
+    "NAME": "Untrustworthy",
     "DESCRIPTION": "Apply !M! Poison for each stack of Weak and Vulnerable. Exhaust."
   },
   "${modID}:CharismaForm": {
