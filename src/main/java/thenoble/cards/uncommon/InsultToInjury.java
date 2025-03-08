@@ -31,7 +31,8 @@ public class InsultToInjury extends NobleCard {
         new DamageAction(
             monster,
             new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL),
-            AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            AbstractGameAction.AttackEffect.BLUNT_LIGHT,
+            true));
   }
 
   @Override

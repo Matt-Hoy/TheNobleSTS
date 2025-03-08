@@ -1,14 +1,13 @@
 package thenoble.actions;
 
+import static thenoble.cards.type.CachetCard.cachetAmount;
+import static thenoble.powers.ConfidencePower.usesMagic;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
 import java.util.ArrayList;
-
-import static thenoble.cards.type.CachetCard.cachetAmount;
-import static thenoble.powers.ConfidencePower.usesMagic;
 
 public class RandomCardFromExhaustPileToHandAction extends AbstractGameAction {
   private final AbstractPlayer player;
