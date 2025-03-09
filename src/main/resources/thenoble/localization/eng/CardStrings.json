@@ -10,7 +10,7 @@
   },
   "${modID}:AntiquePistol": {
     "NAME": "Antique Pistol",
-    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Permanently increase this card's damage by !M!. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Exhaust. ${modID}:Cachet: Permanently increase this card's damage by !M!."
   },
   "${modID}:AtALoss": {
     "NAME": "At A Loss",

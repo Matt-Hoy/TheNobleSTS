@@ -23,7 +23,6 @@ public class AntiquePistol extends CachetCard {
   @Override
   public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new IncreaseDamageAction(magicNumber, this));
-    exhaust = true;
   }
 
   public AntiquePistol() {
@@ -31,6 +30,7 @@ public class AntiquePistol extends CachetCard {
     misc = 8;
     setDamage(misc);
     setMagic(MAGIC, UPG_MAGIC);
+    setExhaust(true);
   }
 
   @Override

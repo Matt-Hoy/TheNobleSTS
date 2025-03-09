@@ -27,6 +27,8 @@ public class AdvantagePower extends BasePower {
               AbstractDungeon.player,
               AbstractDungeon.player,
               new DexterityPower(AbstractDungeon.player, amount)));
+      addToBot(
+          new RemoveSpecificPowerAction(owner, AbstractDungeon.player, AdvantagePower.POWER_ID));
     }
   }
 

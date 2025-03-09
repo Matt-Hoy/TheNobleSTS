@@ -19,7 +19,7 @@ public class Undermine extends CachetCard {
           MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, 1);
   private static final int DAMAGE = 6;
   private static final int UPG_DAMAGE = 3;
-  private static final int MAGIC = 0;
+  private static final int MAGIC = 1;
   private static final int UPG_MAGIC = 1;
 
   public Undermine() {
