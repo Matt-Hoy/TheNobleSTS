@@ -23,9 +23,10 @@ public class PenPalsPower extends BasePower {
     addToBot(
         new DamageAllEnemiesAction(
             AbstractDungeon.player,
-            amount,
+            DamageInfo.createDamageMatrix(amount, true),
             DamageInfo.DamageType.THORNS,
-            AbstractGameAction.AttackEffect.SLASH_HEAVY));
+            AbstractGameAction.AttackEffect.SLASH_HEAVY,
+            true));
   }
 
   public void updateDescription() {

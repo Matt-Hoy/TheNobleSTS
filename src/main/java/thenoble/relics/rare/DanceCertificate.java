@@ -26,7 +26,7 @@ public class DanceCertificate extends CachetRelic {
   public void increment(int cachetCount) {
     for (int i = 0; i < cachetCount; i++) {
       counter++;
-      if (counter % 5 == 0) {
+      if (counter % 2 == 0) {
         counter = 0;
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -35,7 +35,7 @@ public class DanceCertificate extends CachetRelic {
                 AbstractDungeon.player,
                 AbstractDungeon.player,
                 new DexterityPower(AbstractDungeon.player, DEXTERITY_AMOUNT)));
-      } else if (counter == 4) {
+      } else if (counter == 1) {
         beginPulse();
       }
     }

@@ -4,6 +4,8 @@ import static thenoble.TheNoble.makeID;
 import static thenoble.cards.type.CachetCard.cachetAmount;
 
 import com.evacipated.cardcrawl.mod.stslib.patches.bothInterfaces.OnCreateCardInterface;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -30,6 +32,8 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
     if (cachetAmount() < 1) {
       modMagicNumbers();
       this.amount += stackAmount;
+    } else {
+      addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 1));
     }
   }
 

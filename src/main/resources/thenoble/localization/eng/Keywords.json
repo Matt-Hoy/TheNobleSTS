@@ -23,6 +23,6 @@
       "confidence",
       "Confidence"
     ],
-    "DESCRIPTION": "Increase all non-damage and non-Block card effects by the number of Confidence stacks. Confidence maxes out at 1 stack."
+    "DESCRIPTION": "Increase all non-damage and non-Block card effects by the number of Confidence stacks. Confidence maxes out at 1 stack. If new stacks of Confidence would be gained, instead heal 1 HP."
   }
 ]

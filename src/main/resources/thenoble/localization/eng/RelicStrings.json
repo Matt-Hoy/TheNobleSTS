@@ -33,7 +33,7 @@
     "NAME": "Dance Certificate",
     "FLAVOR": "Literal proof of your moves.",
     "DESCRIPTIONS": [
-      "Every time you spend 5 #yConfidence, gain #b",
+      "Every time you spend 2 #yConfidence, gain #b",
       " #yDexterity."
     ]
   },
@@ -63,7 +63,7 @@
     "NAME": "Selfie Stick",
     "FLAVOR": "Look good from every angle.",
     "DESCRIPTIONS": [
-      "Every time you spend 5 #yConfidence, gain #b",
+      "Every time you spend 2 #yConfidence, gain #b",
       " #yStrength."
     ]
   },

@@ -63,7 +63,7 @@
   },
   "${modID}:DanceMoves": {
     "NAME": "Dance Moves",
-    "DESCRIPTION": "Draw !M! card(s)."
+    "DESCRIPTION": "Draw !M! card(s). Gain !M! Plated Armor."
   },
   "${modID}:DanceOnEm": {
     "NAME": "Dance On 'Em",
@@ -214,7 +214,7 @@
   },
   "${modID}:Savings": {
     "NAME": "Savings",
-    "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: Next turnd raw !M! additional card(s)."
+    "DESCRIPTION": "Gain !B! Block. ${modID}:Cachet: Next turn draw !M! additional card(s)."
   },
   "${modID}:Schadenfreude": {
     "NAME": "Schadenfreude",

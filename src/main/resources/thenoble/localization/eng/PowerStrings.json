@@ -38,7 +38,7 @@
     "NAME": "Confidence",
     "DESCRIPTIONS": [
       "Increase all non-damage and non-Block card effects by #b",
-      ". Max 1 stack."
+      ". Every time you would gain a stack after the first, instead heal 1 HP."
     ]
   },
   "${modID}:Demoralize": {
