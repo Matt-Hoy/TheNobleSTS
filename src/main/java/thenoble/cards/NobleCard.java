@@ -733,7 +733,7 @@ public abstract class NobleCard extends CustomCard {
     }
   }
 
-  public int countAllPowers(AbstractMonster target) {
+  public int countAllPowerStacks(AbstractMonster target) {
     int total = 0;
     for (AbstractPower individualPower : target.powers) {
       if (individualPower.type == AbstractPower.PowerType.DEBUFF) {
@@ -741,6 +741,18 @@ public abstract class NobleCard extends CustomCard {
       }
     }
     return total;
+  }
+
+  public int countAllDebuffs(ArrayList<AbstractMonster> monsters) {
+    HashMap<String, Integer> debuffs = new HashMap<>();
+    for (AbstractMonster monster : monsters) {
+      for (AbstractPower power : monster.powers) {
+        if (power.type == AbstractPower.PowerType.DEBUFF && !debuffs.containsKey(power.ID)) {
+          debuffs.put(power.ID, power.amount);
+        }
+      }
+    }
+    return debuffs.size();
   }
 
   protected static class IncreaseDamageAction extends AbstractGameAction {

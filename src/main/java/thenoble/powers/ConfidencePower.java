@@ -28,7 +28,8 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
 
   @Override
   public void stackPower(int stackAmount) {
-    if (cachetAmount() < 1) {
+    if (cachetAmount() < 1
+        || (AbstractDungeon.player.hasPower(CharismaFormPower.POWER_ID) && cachetAmount() < 3)) {
       modMagicNumbers();
       this.amount += stackAmount;
     } else {

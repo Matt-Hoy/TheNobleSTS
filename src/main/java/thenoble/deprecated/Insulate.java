@@ -29,7 +29,7 @@ public class Insulate extends NobleCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    addToBot(new GainBlockAction(player, player, countAllPowers(monster) + dexCheck(player)));
+    addToBot(new GainBlockAction(player, player, countAllPowerStacks(monster) + dexCheck(player)));
   }
 
   //  For some reason the default setBlock is not registering Dexterity

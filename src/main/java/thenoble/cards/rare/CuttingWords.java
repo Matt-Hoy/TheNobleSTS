@@ -15,8 +15,8 @@ public class CuttingWords extends CachetCard {
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, 1);
-  private static final int DAMAGE = 11;
-  private static final int UPG_DAMAGE = 2;
+  private static final int DAMAGE = 14;
+  private static final int UPG_DAMAGE = 4;
 
   public CuttingWords() {
     super(ID, INFO);

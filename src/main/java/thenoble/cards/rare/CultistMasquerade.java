@@ -17,8 +17,8 @@ public class CultistMasquerade extends CachetCard {
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, 1);
-  private static final int DAMAGE = 13;
-  private static final int UPG_DAMAGE = 5;
+  private static final int DAMAGE = 14;
+  private static final int UPG_DAMAGE = 4;
   private static final int MAGIC = 0;
   private static final int UPG_MAGIC = 1;
 

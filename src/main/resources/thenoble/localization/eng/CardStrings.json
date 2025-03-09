@@ -42,8 +42,8 @@
   },
   "${modID}:CharismaForm": {
     "NAME": "Charisma Form",
-    "DESCRIPTION": "Ethereal. At the start of each turn, gain !M! ${modID}:Confidence.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, gain !M! ${modID}:Confidence."
+    "DESCRIPTION": "Ethereal. At the start of each turn, gain !M! ${modID}:Confidence. Your maximum Confidence is 3.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain !M! ${modID}:Confidence. Your maximum Confidence is 3."
   },
   "${modID}:Commission": {
     "NAME": "Commission",
@@ -59,7 +59,7 @@
   },
   "${modID}:CuttingWords": {
     "NAME": "Cutting Words",
-    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Deal an additional !D! damage per stack of ${modID}:Confidence."
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Deal an additional !D! damage."
   },
   "${modID}:DanceMoves": {
     "NAME": "Dance Moves",
@@ -280,7 +280,7 @@
   },
   "${modID}:TargetedCriticism": {
     "NAME": "Targeted Criticism",
-    "DESCRIPTION": "${modID}:Cachet: Deal !D! damage for every stack of debuff on ALL enemies."
+    "DESCRIPTION": "${modID}:Cachet: Deal !D! damage for every type of debuff on ALL enemies."
   },
   "${modID}:TheBestWords": {
     "NAME": "The Best Words",

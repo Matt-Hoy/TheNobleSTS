@@ -31,7 +31,7 @@
     "NAME": "Charisma Form",
     "DESCRIPTIONS": [
       "At the start of each turn, gain #b",
-      " #yConfidence."
+      " #yConfidence. Your maximum Confidence is 3."
     ]
   },
   "${modID}:Confidence": {

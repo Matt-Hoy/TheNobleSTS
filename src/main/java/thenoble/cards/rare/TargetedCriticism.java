@@ -15,7 +15,7 @@ public class TargetedCriticism extends CachetCard {
   public static final String ID = makeID("TargetedCriticism");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, 2);
+          MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, 1);
   private static final int DAMAGE = 4;
   private static final int UPG_DAMAGE = 1;
 
@@ -27,11 +27,8 @@ public class TargetedCriticism extends CachetCard {
 
   @Override
   public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {
-    int stacks = 0;
-    for (AbstractMonster individualMonster : AbstractDungeon.getMonsters().monsters) {
-      stacks += countAllPowers(individualMonster);
-    }
-    for (int i = 0; i < stacks; i++) {
+    int debuffs = countAllDebuffs(AbstractDungeon.getMonsters().monsters);
+    for (int i = 0; i < debuffs; i++) {
       addToBot(
           new DamageAction(
               monster,
