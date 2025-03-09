@@ -27,7 +27,7 @@ public class ConfidencePower extends BasePower implements OnCreateCardInterface 
 
   @Override
   public void stackPower(int stackAmount) {
-    if (cachetAmount() < 3) {
+    if (cachetAmount() < 1) {
       modMagicNumbers();
       this.amount += stackAmount;
     }

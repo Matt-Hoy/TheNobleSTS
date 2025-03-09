@@ -13,7 +13,7 @@ public class SpectralDisposition extends NobleCard {
   public static final String ID = makeID("SpectralDisposition");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.POWER, CardRarity.RARE, CardTarget.SELF, 2);
+          MyCharacter.Meta.CARD_COLOR, CardType.POWER, CardRarity.RARE, CardTarget.SELF, 3);
   private static final int MAGIC = 1;
   private static final int UPG_MAGIC = 1;
 

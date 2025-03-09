@@ -16,8 +16,8 @@ public class RiskyBiscuit extends CachetCard {
   public static final String ID = makeID("RiskyBiscuit");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, 3);
-  private static final int DAMAGE = 18;
+          MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, 2);
+  private static final int DAMAGE = 13;
   private static final int UPG_DAMAGE = 9;
 
   public RiskyBiscuit() {

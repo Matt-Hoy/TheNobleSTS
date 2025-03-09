@@ -104,7 +104,7 @@
   },
   "${modID}:FancyBoots": {
     "NAME": "Fancy Boots",
-    "DESCRIPTION": "Gain !M! Dexterity."
+    "DESCRIPTION": "Gain !M! Dexterity. Exhaust."
   },
   "${modID}:FieryTemper": {
     "NAME": "Fiery Temper",

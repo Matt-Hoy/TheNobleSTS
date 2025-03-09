@@ -25,7 +25,6 @@ public class Distract extends NobleCard {
 
     setBlock(BLOCK, UPG_BLOCK);
     setMagic(MAGIC);
-    setCostUpgrade(0);
   }
 
   @Override
