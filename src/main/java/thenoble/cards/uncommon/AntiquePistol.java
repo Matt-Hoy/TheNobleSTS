@@ -18,7 +18,7 @@ public class AntiquePistol extends CachetCard {
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY, 1);
   private static final int MAGIC = 4;
-  private static final int UPG_MAGIC = 6;
+  private static final int UPG_MAGIC = 2;
 
   @Override
   public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {
