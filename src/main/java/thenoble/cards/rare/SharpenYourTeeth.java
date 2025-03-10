@@ -20,6 +20,7 @@ public class SharpenYourTeeth extends NobleCard {
     super(ID, INFO);
 
     setMagic(MAGIC, UPG_MAGIC);
+    setExhaust(true);
   }
 
   @Override
