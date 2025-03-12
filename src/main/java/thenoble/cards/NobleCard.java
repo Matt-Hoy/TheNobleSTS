@@ -123,6 +123,7 @@ public abstract class NobleCard extends CustomCard {
     this.damageUpgrade = 0;
     this.blockUpgrade = 0;
     this.magicUpgrade = 0;
+    this.glowColor = Color.MAGENTA;
   }
 
   private static String getName(String ID) {
