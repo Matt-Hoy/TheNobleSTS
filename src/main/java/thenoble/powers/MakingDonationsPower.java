@@ -5,6 +5,7 @@ import static thenoble.TheNoble.makeID;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class MakingDonationsPower extends BasePower {
@@ -20,7 +21,7 @@ public class MakingDonationsPower extends BasePower {
   public void onExhaust(AbstractCard card) {
     if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
       flash();
-      addToBot(new GainBlockAction(owner, amount));
+      addToBot(new GainBlockAction(owner, amount, Settings.FAST_MODE));
     }
   }
 
