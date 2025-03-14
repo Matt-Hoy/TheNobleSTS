@@ -32,10 +32,6 @@
     "NAME": "Born On Third",
     "DESCRIPTION": "At the start of each turn, add !M! random Skill card(s) to your hand."
   },
-  "${modID}:ConfidenceTest": {
-    "NAME": "Confidence Test",
-    "DESCRIPTION": "Gain 1 ${modID}:Confidence."
-  },
   "${modID}:Untrustworthy": {
     "NAME": "Untrustworthy",
     "DESCRIPTION": "Apply !M! Poison for each stack of Weak and Vulnerable. Exhaust."
