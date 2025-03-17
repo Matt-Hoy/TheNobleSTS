@@ -2,9 +2,11 @@ package thenoble.cards.uncommon;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -35,13 +37,13 @@ public class WideSwipe extends CachetCard {
 
   @Override
   public void cachetEffect(AbstractPlayer player, ArrayList<AbstractMonster> monsters) {
-    for (AbstractMonster individualMonster : monsters) {
-      addToBot(
-          new DamageAction(
-              individualMonster,
-              new DamageInfo(player, damage * 2, DamageInfo.DamageType.NORMAL),
-              AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-    }
+    addToBot(
+        new DamageAllEnemiesAction(
+            player,
+            DamageInfo.createDamageMatrix(damage, false),
+            DamageInfo.DamageType.NORMAL,
+            AbstractGameAction.AttackEffect.SLASH_HORIZONTAL,
+            Settings.FAST_MODE));
   }
 
   @Override

@@ -13,14 +13,14 @@ public class ThickSkin extends NobleCard {
   public static final String ID = makeID("ThickSkin");
   private static final CardStats INFO =
       new CardStats(
-          MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, 0);
+          MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF, 1);
   private static final int MAGIC = 1;
-  private static final int UPG_MAGIC = 1;
 
   public ThickSkin() {
     super(ID, INFO);
 
-    setMagic(MAGIC, UPG_MAGIC);
+    setMagic(MAGIC);
+    setCostUpgrade(0);
     setExhaust(true);
   }
 

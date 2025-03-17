@@ -14,7 +14,7 @@ public class MakingDonations extends NobleCard {
   private static final CardStats INFO =
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.POWER, CardRarity.COMMON, CardTarget.SELF, 1);
-  private static final int MAGIC = 3;
+  private static final int MAGIC = 2;
   private static final int UPG_MAGIC = 1;
 
   public MakingDonations() {

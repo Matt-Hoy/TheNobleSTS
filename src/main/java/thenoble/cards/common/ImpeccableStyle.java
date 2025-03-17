@@ -17,12 +17,11 @@ public class ImpeccableStyle extends NobleCard {
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY, 1);
   private static final int MAGIC = 1;
-  private static final int UPG_MAGIC = 1;
 
   public ImpeccableStyle() {
     super(ID, INFO);
 
-    setMagic(MAGIC, UPG_MAGIC);
+    setMagic(MAGIC);
     setCostUpgrade(0);
     setExhaust(true);
   }

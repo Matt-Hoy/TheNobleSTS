@@ -20,7 +20,7 @@ public class Entitlement extends NobleCard {
     super(ID, INFO);
 
     setMagic(MAGIC);
-    setCostUpgrade(1);
+    setInnate(false, true);
   }
 
   @Override

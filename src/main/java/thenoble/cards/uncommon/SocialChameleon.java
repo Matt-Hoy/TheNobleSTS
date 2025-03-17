@@ -35,8 +35,7 @@ public class SocialChameleon extends CachetCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    int count = cachetAmount();
-    if (count > 0) {
+    if (cachetAmount() > 0) {
       triggerCachetEffect(player, monster, magicNumber);
     } else {
       AbstractCard newCard =

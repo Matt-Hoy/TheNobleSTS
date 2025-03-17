@@ -15,12 +15,12 @@ public class SpectralDisposition extends NobleCard {
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.POWER, CardRarity.RARE, CardTarget.SELF, 3);
   private static final int MAGIC = 1;
-  private static final int UPG_MAGIC = 1;
 
   public SpectralDisposition() {
     super(ID, INFO);
 
-    setMagic(MAGIC, UPG_MAGIC);
+    setMagic(MAGIC);
+    setEthereal(true, false);
   }
 
   @Override

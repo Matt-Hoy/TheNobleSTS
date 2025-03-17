@@ -17,20 +17,17 @@ public class ThrowTheGlove extends CachetCard {
       new CardStats(
           MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY, 0);
   private static final int DAMAGE = 3;
-  private static final int UPG_DAMAGE = 2;
 
   public ThrowTheGlove() {
     super(ID, INFO);
 
-    setDamage(DAMAGE, UPG_DAMAGE);
+    setDamage(DAMAGE);
+    setExhaust(true);
   }
 
   @Override
   public void cachetEffect(AbstractPlayer player, AbstractMonster monster) {
     addToBot(new ExpertiseAction(player, 10));
-    if (!upgraded) {
-      exhaust = true;
-    }
   }
 
   @Override

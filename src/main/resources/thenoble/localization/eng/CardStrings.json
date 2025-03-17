@@ -87,7 +87,7 @@
   },
   "${modID}:DuelistsStrike": {
     "NAME": "Duelist's Strike",
-    "DESCRIPTION": "Deal !D! damage. Gain !M! Dexterity. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Gain !M! Dexterity. Exhaust."
   },
   "${modID}:Entitlement": {
     "NAME": "Entitlement",
@@ -153,8 +153,8 @@
   },
   "${modID}:Narcissism": {
     "NAME": "Narcissism",
-    "DESCRIPTION": "At the start of each turn, gain !M! Dexterity and !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. At the start of each turn, gain !M! Dexterity and !M! Strength."
+    "DESCRIPTION": "Ethereal. At the start of each turn, gain !M! Dexterity and !M! Strength.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain !M! Dexterity and !M! Strength."
   },
   "${modID}:OpenBar": {
     "NAME": "Open Bar",
@@ -250,7 +250,7 @@
   },
   "${modID}:SpectralDisposition": {
     "NAME": "Spectral Disposition",
-    "DESCRIPTION": "At the start of each turn, return !M! random playable card(s) from your exhaust pile to your hand.",
+    "DESCRIPTION": "Ethereal. At the start of each turn, return !M! random playable card(s) from your exhaust pile to your hand.",
     "UPGRADE_DESCRIPTION": "At the start of each turn, return !M! random playable cards from your exhaust pile to your hand."
   },
   "${modID}:SpectralFog": {
@@ -283,7 +283,7 @@
   },
   "${modID}:TheDuster": {
     "NAME": "The Duster",
-    "DESCRIPTION": "Gain !M! Buffer. Exhaust."
+    "DESCRIPTION": "Gain !M! Buffer."
   },
   "${modID}:ThickSkin": {
     "NAME": "Thick Skin",
@@ -291,8 +291,7 @@
   },
   "${modID}:ThrowTheGlove": {
     "NAME": "Throw The Glove",
-    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards until your hand is full. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards until your hand is full."
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Draw cards until your hand is full. Exhaust."
   },
   "${modID}:Undermine": {
     "NAME": "Undermine",
@@ -308,6 +307,6 @@
   },
   "${modID}:WideSwipe": {
     "NAME": "Wide Swipe",
-    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Instead, deal double damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Cachet: Instead, deal !D! damage to ALL enemies."
   }
 }

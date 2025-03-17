@@ -20,7 +20,7 @@ public class Narcissism extends NobleCard {
     super(ID, INFO);
 
     setMagic(MAGIC);
-    setInnate(false, true);
+    setEthereal(true, false);
   }
 
   @Override

@@ -22,7 +22,7 @@ public class SillyAffectPower extends BasePower {
   public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
     if (info.type == DamageInfo.DamageType.NORMAL && damageAmount > 0) {
       flash();
-      if (cachetAmount() > 0 || amount > 0) {
+      if (amount > 0 || cachetAmount() > 0) {
         addToBot(
             new ApplyPowerAction(
                 target, AbstractDungeon.player, new WeakPower(target, amount, false)));

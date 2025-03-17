@@ -2,12 +2,13 @@ package thenoble.powers;
 
 import static thenoble.TheNoble.makeID;
 
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class SpectralFogPower extends BasePower {
   public static final String POWER_ID = makeID("SpectralFog");
@@ -22,9 +23,12 @@ public class SpectralFogPower extends BasePower {
   public void onUseCard(AbstractCard card, UseCardAction action) {
     if (card.exhaust) {
       flash();
-      for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-        addToBot(new LoseHPAction(monster, AbstractDungeon.player, amount));
-      }
+      addToBot(
+          new DamageAllEnemiesAction(
+              AbstractDungeon.player,
+              DamageInfo.createDamageMatrix(amount, true),
+              DamageInfo.DamageType.THORNS,
+              AbstractGameAction.AttackEffect.NONE));
     }
   }
 

@@ -1,5 +1,7 @@
 package thenoble.cards.common;
 
+import static thenoble.cards.type.CachetCard.cachetAmount;
+
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -19,7 +21,7 @@ public class Roughhouse extends NobleCard {
           MyCharacter.Meta.CARD_COLOR, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY, 1);
   private static final int DAMAGE = 5;
   private static final int UPG_DAMAGE = 3;
-  private static final int MAGIC = 1;
+  private static final int MAGIC = 0;
   private static final int UPG_MAGIC = 1;
 
   public Roughhouse() {
@@ -37,9 +39,11 @@ public class Roughhouse extends NobleCard {
             monster,
             new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL),
             AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-    addToBot(
-        new ApplyPowerAction(
-            player, player, new PlatedArmorPower(player, magicNumber), magicNumber));
+    if (magicNumber > 0 || cachetAmount() > 0) {
+      addToBot(
+          new ApplyPowerAction(
+              player, player, new PlatedArmorPower(player, magicNumber), magicNumber));
+    }
   }
 
   @Override

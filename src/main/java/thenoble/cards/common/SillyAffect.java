@@ -27,7 +27,7 @@ public class SillyAffect extends NobleCard {
 
   @Override
   public void use(AbstractPlayer player, AbstractMonster monster) {
-    if (cachetAmount() > 0 || magicNumber > 0) {
+    if (magicNumber > 0 || cachetAmount() > 0) {
       addToBot(new ApplyPowerAction(player, player, new SillyAffectPower(player, magicNumber)));
     }
   }
